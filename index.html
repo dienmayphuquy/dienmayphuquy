@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Điện Máy Phú Quý - Máy nông nghiệp, máy sân vườn, điện máy chính hãng</title>
+  <meta name="description" content="Điện Máy Phú Quý chuyên cung cấp máy cắt cỏ, máy xới đất, máy thổi lá, máy phun thuốc, máy cưa cành và thiết bị điện máy chính hãng. Hotline 0888.656.119." />
+  <style>
+    :root {
+      --blue: #0b63ce;
+      --blue-dark: #064a9d;
+      --orange: #ff7a00;
+      --orange-dark: #e56700;
+      --green: #16a34a;
+      --dark: #172033;
+      --text: #334155;
+      --muted: #64748b;
+      --light: #f5f8fc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    .topbar {
+      background: var(--dark);
+      color: #e5e7eb;
+      font-size: 14px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 9px 0;
+      flex-wrap: wrap;
+    }
+
+    .header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--blue);
+      font-size: 22px;
+      letter-spacing: 0.2px;
+    }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 8px 18px rgba(11, 99, 206, 0.25);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--dark);
+    }
+
+    .nav a:hover {
+      color: var(--orange);
+    }
+
+    .hotline-btn {
+      background: var(--orange);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(255, 122, 0, 0.25);
+      white-space: nowrap;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 122, 0, 0.18), transparent 28%),
+        linear-gradient(135deg, #063b7d 0%, #0b63ce 58%, #0ea5e9 100%);
+      color: white;
+      padding: 72px 0 62px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      margin: 0 0 26px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 800;
+      transition: 0.2s;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 10px 24px rgba(255, 122, 0, 0.28);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.14);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateY(-2px);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 720px;
+    }
+
+    .hero-point {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-product {
+      background: white;
+      color: var(--dark);
+      border-radius: 24px;
+      padding: 26px;
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-product::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255, 122, 0, 0.2), rgba(11, 99, 206, 0.14));
+      top: -80px;
+      right: -70px;
+    }
+
+    .product-icon {
+      font-size: 96px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero-product h3 {
+      margin: 0;
+      font-size: 28px;
+      position: relative;
+    }
+
+    .hero-product p {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 10px 0 0;
+      position: relative;
+    }
+
+    section {
+      padding: 68px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .section-title span {
+      color: var(--orange);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+
+    .section-title h2 {
+      color: var(--dark);
+      margin: 8px 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+    }
+
+    .section-title p {
+      margin: 0 auto;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+      transition: 0.2s;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .cat-icon {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: #eff6ff;
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .category-card h3 {
+      color: var(--dark);
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .category-card p {
+      color: var(--muted);
+      margin: 0 0 16px;
+      font-size: 15px;
+    }
+
+    .readmore {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .strip {
+      padding: 38px 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 14px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--blue);
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+    }
+
+    .product-visual {
+      height: 185px;
+      background: linear-gradient(135deg, #e0f2fe, #fff7ed);
+      display: grid;
+      place-items: center;
+      font-size: 68px;
+    }
+
+    .product-body {
+      padding: 22px;
+    }
+
+    .product-body h3 {
+      margin: 0 0 8px;
+      color: var(--dark);
+      font-size: 20px;
+    }
+
+    .product-body p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .price-note {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .why {
+      background: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .why-box {
+      background: linear-gradient(135deg, var(--blue), #0ea5e9);
+      color: white;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .why-box h2 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .why-box p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .benefits {
+      display: grid;
+      gap: 14px;
+    }
+
+    .benefit {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .benefit b {
+      color: var(--dark);
+    }
+
+    .benefit span {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      flex: none;
+      font-weight: 900;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #111827, #0b63ce);
+      color: white;
+      text-align: center;
+      border-radius: 34px;
+      padding: 48px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 44px);
+    }
+
+    .cta p {
+      margin: 0 auto 24px;
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 760px;
+      font-size: 17px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .contact-card, .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+    }
+
+    .contact-line {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .contact-line:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-line strong {
+      color: var(--dark);
+      display: block;
+    }
+
+    .form-card input, .form-card textarea, .form-card select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      outline: none;
+      background: #fff;
+    }
+
+    .form-card input:focus, .form-card textarea:focus, .form-card select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(11, 99, 206, 0.12);
+    }
+
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 34px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 1fr;
+      gap: 26px;
+      margin-bottom: 24px;
+    }
+
+    .footer h3, .footer h4 {
+      color: white;
+      margin: 0 0 12px;
+    }
+
+    .footer p {
+      margin: 0 0 8px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 18px;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    .floating {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: grid;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .float-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      color: white;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    .call {
+      background: var(--orange);
+    }
+
+    .zalo {
+      background: var(--blue);
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .why-grid, .contact-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .categories, .products, .strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 54px 0 46px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .categories, .products, .strip-grid, .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .floating {
+        left: 12px;
+        right: 12px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .float-btn {
+        justify-content: center;
+        padding: 11px 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Điện máy - máy nông nghiệp - thiết bị sân vườn</div>
+      <div>Hotline: <strong>0888.656.119</strong> | KĐT Long Việt, Quang Minh, Hà Nội</div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">PQ</span>
+        <span>Điện Máy Phú Quý</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#danh-muc">Danh mục</a>
+        <a href="#san-pham">Sản phẩm</a>
+        <a href="#cam-ket">Cam kết</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+
+      <a class="hotline-btn" href="tel:0888656119">Gọi 0888.656.119</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">✅ Tư vấn đúng nhu cầu - Giao hàng nhanh - Giá tốt</div>
+        <h1>Điện Máy Phú Quý</h1>
+        <p>
+          Chuyên cung cấp máy cắt cỏ, máy xới đất, máy thổi lá, máy phun thuốc,
+          máy cưa cành, máy phát điện và thiết bị điện máy phục vụ gia đình, nhà vườn, trang trại.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:0888656119">Gọi tư vấn ngay</a>
+          <a class="btn btn-secondary" href="#danh-muc">Xem danh mục sản phẩm</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="hero-point">Hàng chọn lọc, dễ sử dụng</div>
+          <div class="hero-point">Hỗ trợ kỹ thuật tận tình</div>
+          <div class="hero-point">Phù hợp gia đình & nhà vườn</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-product">
+          <div>
+            <div class="product-icon">🌿</div>
+            <h3>Máy nông nghiệp & điện máy</h3>
+            <p>Giải pháp gọn nhẹ cho sân vườn, ruộng vườn và công việc hằng ngày.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="danh-muc">
+    <div class="container">
+      <div class="section-title">
+        <span>Danh mục sản phẩm</span>
+        <h2>Sản phẩm nổi bật tại Phú Quý</h2>
+        <p>Lựa chọn các dòng máy thông dụng, dễ dùng, phù hợp nhu cầu cắt cỏ, làm vườn, chăm sóc cây và vệ sinh sân vườn.</p>
+      </div>
+
+      <div class="categories">
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">🌱</div>
+            <h3>Máy cắt cỏ</h3>
+            <p>Máy cắt cỏ dùng xăng, dùng pin, phù hợp sân vườn, bờ cỏ, vườn cây.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">🚜</div>
+            <h3>Máy xới đất</h3>
+            <p>Máy xới đất mini, đầu xới, phụ kiện làm vườn cho hộ gia đình.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">🍃</div>
+            <h3>Máy thổi lá</h3>
+            <p>Dọn lá, vệ sinh sân vườn, nhà xưởng, lối đi nhanh và tiện lợi.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">🌳</div>
+            <h3>Bộ cưa cắt cành</h3>
+            <p>Dụng cụ hỗ trợ cắt tỉa cành cây, chăm sóc vườn cây ăn quả.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">💦</div>
+            <h3>Máy phun thuốc</h3>
+            <p>Phục vụ phun tưới, chăm sóc cây trồng, vệ sinh và phòng sâu bệnh.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">⚡</div>
+            <h3>Máy phát điện</h3>
+            <p>Giải pháp điện dự phòng cho gia đình, cửa hàng, nhà vườn.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">🧰</div>
+            <h3>Dụng cụ điện</h3>
+            <p>Máy khoan, máy mài, thiết bị sửa chữa cơ bản cho gia đình.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+
+        <article class="category-card">
+          <div>
+            <div class="cat-icon">🛠️</div>
+            <h3>Phụ kiện thay thế</h3>
+            <p>Lưỡi cắt, đầu cước, dây đeo, bugi, lọc gió và phụ kiện đi kèm.</p>
+          </div>
+          <a class="readmore" href="#lien-he">Xem thêm →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="container strip-grid">
+      <div class="stat"><strong>01</strong><span>Tư vấn đúng máy</span></div>
+      <div class="stat"><strong>02</strong><span>Báo giá rõ ràng</span></div>
+      <div class="stat"><strong>03</strong><span>Hỗ trợ sử dụng</span></div>
+      <div class="stat"><strong>04</strong><span>Phục vụ tận tâm</span></div>
+    </div>
+  </div>
+
+  <section id="san-pham">
+    <div class="container">
+      <div class="section-title">
+        <span>Gợi ý mua hàng</span>
+        <h2>Các nhóm sản phẩm nên tham khảo</h2>
+        <p>Khách hàng có thể gọi trực tiếp để được tư vấn mẫu phù hợp với diện tích sử dụng, tần suất làm việc và ngân sách.</p>
+      </div>
+
+      <div class="products">
+        <article class="product-card">
+          <div class="product-visual">🌿</div>
+          <div class="product-body">
+            <h3>Máy cắt cỏ gia đình</h3>
+            <p>Phù hợp dọn cỏ sân vườn, vườn cây, lối đi, khu đất nhỏ và vừa.</p>
+            <div class="price-note"><span>Liên hệ báo giá</span><a href="tel:0888656119">Gọi ngay</a></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-visual">🚜</div>
+          <div class="product-body">
+            <h3>Máy xới đất mini</h3>
+            <p>Hỗ trợ làm đất, xới luống nhỏ, chăm sóc vườn rau và cây trồng.</p>
+            <div class="price-note"><span>Liên hệ báo giá</span><a href="tel:0888656119">Gọi ngay</a></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-visual">🍃</div>
+          <div class="product-body">
+            <h3>Máy thổi lá sân vườn</h3>
+            <p>Dọn lá khô, bụi nhẹ, vệ sinh sân vườn, nhà xưởng, lối đi.</p>
+            <div class="price-note"><span>Liên hệ báo giá</span><a href="tel:0888656119">Gọi ngay</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cam-ket" class="why">
+    <div class="container why-grid">
+      <div class="why-box">
+        <h2>Vì sao chọn Điện Máy Phú Quý?</h2>
+        <p>
+          Phú Quý tập trung vào sản phẩm thực tế, dễ bán, dễ dùng, hỗ trợ khách hàng trước và sau khi mua.
+          Mục tiêu là giúp khách chọn đúng máy, tránh mua sai nhu cầu.
+        </p>
+      </div>
+
+      <div class="benefits">
+        <div class="benefit">
+          <span>✓</span>
+          <div><b>Tư vấn theo nhu cầu thật</b><br />Dựa trên diện tích sử dụng, loại cỏ, tần suất dùng và ngân sách.</div>
+        </div>
+        <div class="benefit">
+          <span>✓</span>
+          <div><b>Sản phẩm đa dạng</b><br />Máy cắt cỏ, máy xới đất, máy thổi lá, máy phun thuốc, phụ kiện thay thế.</div>
+        </div>
+        <div class="benefit">
+          <span>✓</span>
+          <div><b>Hỗ trợ kỹ thuật</b><br />Hướng dẫn lắp ráp, sử dụng cơ bản, bảo quản và lựa chọn phụ kiện phù hợp.</div>
+        </div>
+        <div class="benefit">
+          <span>✓</span>
+          <div><b>Thông tin rõ ràng</b><br />Hotline, địa chỉ, chính sách tư vấn và kênh liên hệ được hiển thị đầy đủ.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Mua ngay để nhận ưu đãi</h2>
+        <p>
+          Cần máy cắt cỏ, máy xới đất, máy phun thuốc hoặc thiết bị điện máy?
+          Gọi ngay Điện Máy Phú Quý để được tư vấn mẫu phù hợp và báo giá nhanh.
+        </p>
+        <div class="hero-actions" style="justify-content:center;margin-bottom:0;">
+          <a class="btn btn-primary" href="tel:0888656119">Gọi 0888.656.119</a>
+          <a class="btn btn-secondary" href="https://zalo.me/0888656119" target="_blank" rel="noopener">Nhắn Zalo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lien-he">
+    <div class="container">
+      <div class="section-title">
+        <span>Hỗ trợ khách hàng</span>
+        <h2>Liên hệ Điện Máy Phú Quý</h2>
+        <p>Để lại thông tin hoặc gọi trực tiếp để được tư vấn sản phẩm phù hợp.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Thông tin liên hệ</h3>
+
+          <div class="contact-line">
+            <div>☎️</div>
+            <div>
+              <strong>Hotline</strong>
+              <a href="tel:0888656119">0888.656.119</a>
+            </div>
+          </div>
+
+          <div class="contact-line">
+            <div>📍</div>
+            <div>
+              <strong>Địa chỉ</strong>
+              KĐT Long Việt, Quang Minh, Hà Nội
+            </div>
+          </div>
+
+          <div class="contact-line">
+            <div>💬</div>
+            <div>
+              <strong>Zalo tư vấn</strong>
+              <a href="https://zalo.me/0888656119" target="_blank" rel="noopener">zalo.me/0888656119</a>
+            </div>
+          </div>
+
+          <div class="contact-line">
+            <div>🛒</div>
+            <div>
+              <strong>Hình thức bán hàng</strong>
+              Tư vấn trực tiếp, đặt hàng online, giao hàng theo khu vực.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Yêu cầu tư vấn</h3>
+          <form onsubmit="event.preventDefault(); alert('Cảm ơn quý khách! Vui lòng gọi hotline 0888.656.119 để được hỗ trợ nhanh nhất.');">
+            <input type="text" placeholder="Họ và tên" required />
+            <input type="tel" placeholder="Số điện thoại" required />
+            <select required>
+              <option value="">Chọn nhóm sản phẩm quan tâm</option>
+              <option>Máy cắt cỏ</option>
+              <option>Máy xới đất</option>
+              <option>Máy thổi lá</option>
+              <option>Máy phun thuốc</option>
+              <option>Máy phát điện</option>
+              <option>Phụ kiện thay thế</option>
+            </select>
+            <textarea rows="4" placeholder="Nhu cầu của bạn: diện tích vườn, loại máy cần mua, ngân sách dự kiến..."></textarea>
+            <button class="btn btn-primary" type="submit" style="width:100%;">Gửi yêu cầu tư vấn</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Điện Máy Phú Quý</h3>
+        <p>Chuyên cung cấp máy nông nghiệp, máy sân vườn và thiết bị điện máy phục vụ gia đình, nhà vườn, cửa hàng.</p>
+      </div>
+
+      <div>
+        <h4>Danh mục</h4>
+        <p><a href="#danh-muc">Sản phẩm</a></p>
+        <p><a href="#cam-ket">Cam kết</a></p>
+        <p><a href="#lien-he">Liên hệ</a></p>
+      </div>
+
+      <div>
+        <h4>Hỗ trợ khách hàng</h4>
+        <p>Hotline: <a href="tel:0888656119">0888.656.119</a></p>
+        <p>Địa chỉ: KĐT Long Việt, Quang Minh, Hà Nội</p>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      Bản quyền ©2022 Điện Máy Phú Quý. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="floating">
+    <a class="float-btn call" href="tel:0888656119">☎ Gọi ngay</a>
+    <a class="float-btn zalo" href="https://zalo.me/0888656119" target="_blank" rel="noopener">💬 Zalo</a>
+  </div>
+</body>
+</html>
