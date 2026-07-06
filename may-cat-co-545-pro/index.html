@@ -1,1 +1,522 @@
-Đang cập nhật...
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máy Cắt Cỏ Hus Pro 545 - Điện Máy Phú Quý</title>
+  <meta name="description" content="Máy cắt cỏ Hus Pro 545 mạnh mẽ, bền bỉ, có video giao khách thực tế. Điện Máy Phú Quý - Hotline 0888.656.119." />
+  <style>
+    :root {
+      --blue:#002f73; --blue2:#004aad; --yellow:#ffc400; --red:#c91515; --red2:#e8332a;
+      --green:#16a34a; --dark:#061b3b; --text:#172033; --muted:#64748b; --bg:#f4f7fb;
+      --white:#fff; --border:#e5e7eb; --shadow:0 15px 42px rgba(15,23,42,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1180px,calc(100% - 28px));margin:auto}
+
+    .topbar{background:linear-gradient(90deg,#00275f,#003f91);color:#fff}
+    .topbar .container{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:10px 0}
+    .topitem{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}
+    .topitem span{font-size:24px;color:var(--yellow)}
+    .topitem small{display:block;font-weight:400;opacity:.9}
+
+    .header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 6px 22px rgba(15,23,42,.08)}
+    .header-inner{height:88px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-mark{width:62px;height:62px;border-radius:50%;background:var(--yellow);border:5px solid var(--blue);display:grid;place-items:center;color:var(--blue);font-weight:900;font-size:27px}
+    .logo b{display:block;color:var(--blue);font-size:29px;line-height:.95}
+    .logo em{display:block;color:var(--red);font-style:italic;font-weight:800;margin-top:6px}
+    .nav{display:flex;gap:20px;font-weight:900;font-size:14px}
+    .nav a:hover{color:var(--red)}
+    .head-call{display:flex;align-items:center;gap:10px}
+    .head-call i{font-style:normal;width:46px;height:46px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:23px}
+    .head-call small{display:block;font-weight:800}
+    .head-call b{color:var(--red);font-size:22px}
+
+    .hero{background:linear-gradient(135deg,#071b38 0%,#063d88 52%,#0ea5e9 100%);color:#fff;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 15%,rgba(255,196,0,.25),transparent 24%),radial-gradient(circle at 86% 12%,rgba(255,255,255,.18),transparent 20%)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center;padding:54px 0 46px}
+    .badge{display:inline-flex;background:#fff;color:var(--red);padding:9px 15px;border-radius:999px;font-weight:900;margin-bottom:14px;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+    .hero h1{font-size:clamp(38px,5.2vw,68px);line-height:1.03;margin:0 0 12px;text-transform:uppercase;font-weight:900}
+    .hero h1 span{color:var(--yellow)}
+    .hero p{font-size:19px;color:rgba(255,255,255,.92);margin:0 0 18px}
+    .hero-list{list-style:none;padding:0;margin:0 0 20px;font-size:17px;font-weight:800}
+    .hero-list li{margin:8px 0}
+    .hero-list li:before{content:"✓";color:var(--yellow);margin-right:10px}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:900;border:0;cursor:pointer;transition:.2s}
+    .btn-red{background:linear-gradient(180deg,#e63225,#b80e0e);color:#fff;box-shadow:0 10px 24px rgba(201,21,21,.3)}
+    .btn-yellow{background:var(--yellow);color:#07285d}
+    .btn-outline{border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.12);color:#fff}
+    .btn:hover{transform:translateY(-2px)}
+    .hero-card{background:#fff;border-radius:26px;padding:16px;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-card img{width:100%;border-radius:18px;object-fit:cover}
+    .price-box{margin-top:14px;background:#fff7ed;border:1px solid #fed7aa;border-radius:18px;padding:16px;color:#111827;text-align:center}
+    .price-box strong{font-size:26px;color:var(--red);display:block}
+    .price-box span{color:#64748b;font-weight:700}
+
+    .hot-strip{background:#fff;border-top:4px solid var(--yellow);border-bottom:1px solid var(--border);padding:16px 0}
+    .hot-grid{display:grid;grid-template-columns:1.2fr .8fr .9fr;gap:16px;align-items:center}
+    .hot-title{font-weight:900;color:var(--red);font-size:22px;text-transform:uppercase}
+    .hot-title small{display:block;color:#334155;font-size:14px;text-transform:none;margin-top:3px}
+    .countdown{display:flex;gap:8px;justify-content:center}
+    .timebox{background:var(--red);color:#fff;border-radius:10px;padding:10px 12px;text-align:center;min-width:58px}
+    .timebox b{display:block;font-size:24px;line-height:1}
+    .timebox span{font-size:12px}
+    .stock{background:#fff7ed;border:1px dashed var(--red);border-radius:14px;padding:12px;text-align:center;font-weight:900;color:#9f1239}
+
+    .quick{padding:22px 0 0}
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .quick-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;display:flex;align-items:center;gap:13px;box-shadow:var(--shadow)}
+    .quick-card i{font-style:normal;font-size:30px;color:var(--blue)}
+    .quick-card b{display:block;color:var(--blue)}
+    .quick-card small{color:var(--muted)}
+
+    section{padding:55px 0}
+    .title{text-align:center;margin-bottom:28px}
+    .title span{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.5px}
+    .title h2{margin:7px 0 8px;color:var(--blue);font-size:clamp(29px,4vw,43px);line-height:1.15}
+    .title p{margin:0 auto;color:var(--muted);max-width:760px}
+
+    .video-section{background:#fff}
+    .video-lead{background:linear-gradient(135deg,#fff7ed,#eff6ff);border:1px solid #fed7aa;border-radius:22px;padding:22px;margin-bottom:22px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;box-shadow:0 10px 26px rgba(15,23,42,.07)}
+    .video-lead b{color:var(--red);font-size:22px}
+    .video-lead p{margin:5px 0 0;color:#475569}
+    .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .video-card{background:#0f172a;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+    .video-card video{width:100%;height:320px;object-fit:cover;background:#111}
+    .video-caption{background:#fff;padding:14px;border:1px solid var(--border);border-top:0}
+    .video-caption b{display:block;color:var(--blue)}
+    .video-caption span{color:var(--muted);font-size:14px}
+
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .feature{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;text-align:center;box-shadow:0 10px 26px rgba(15,23,42,.07)}
+    .feature i{font-style:normal;font-size:42px}
+    .feature h3{margin:10px 0 8px;color:var(--blue)}
+    .feature p{margin:0;color:var(--muted);font-size:15px}
+
+    .deal{background:linear-gradient(135deg,#fff7ed,#eff6ff)}
+    .deal-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .deal-box{background:#fff;border-radius:22px;padding:28px;border:1px solid #fed7aa;box-shadow:var(--shadow)}
+    .deal-box h2{font-size:38px;color:var(--red);margin:0 0 10px}
+    .gift-list{list-style:none;padding:0;margin:18px 0}
+    .gift-list li{padding:11px 0;border-bottom:1px dashed var(--border);font-weight:800}
+    .gift-list li:before{content:"🎁";margin-right:10px}
+    .reg-card{background:#071b38;color:#fff;border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+    .reg-card h3{font-size:28px;margin:0 0 12px;color:var(--yellow)}
+    input,select,textarea{width:100%;border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:12px;font-size:15px}
+    textarea{min-height:90px;resize:vertical}
+
+    .split{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center}
+    .photo-card{background:#fff;border-radius:22px;padding:14px;box-shadow:var(--shadow);border:1px solid var(--border)}
+    .photo-card img{border-radius:16px;width:100%;object-fit:cover}
+    .content-card{background:#fff;border-radius:22px;padding:28px;box-shadow:var(--shadow);border:1px solid var(--border)}
+    .content-card h2{margin:0 0 12px;color:var(--blue);font-size:34px}
+    .checklist{list-style:none;padding:0;margin:0}
+    .checklist li{padding:11px 0;border-bottom:1px dashed var(--border);font-weight:700}
+    .checklist li:before{content:"✓";display:inline-grid;place-items:center;width:24px;height:24px;background:var(--green);color:#fff;border-radius:50%;margin-right:10px;font-size:13px}
+
+    .specs{background:#fff}
+    .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .spec{background:#f8fafc;border:1px solid var(--border);border-radius:14px;padding:16px}
+    .spec b{color:var(--blue);display:block;margin-bottom:5px}
+    .spec span{font-weight:800;color:#111827}
+    .note{margin-top:15px;color:#64748b;font-style:italic;text-align:center}
+
+    .package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .package{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 10px 26px rgba(15,23,42,.07)}
+    .package h3{margin:0 0 12px;color:var(--blue)}
+    .package ul{margin:0;padding-left:20px}
+
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .review{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 10px 26px rgba(15,23,42,.07)}
+    .stars{color:#f59e0b;font-weight:900}
+    .review b{color:var(--blue)}
+    .faq{display:grid;gap:14px;max-width:900px;margin:auto}
+    .faq details{background:#fff;border:1px solid var(--border);border-radius:16px;padding:17px 20px;box-shadow:0 8px 20px rgba(15,23,42,.06)}
+    .faq summary{font-weight:900;color:var(--blue);cursor:pointer}
+
+    .social-proof{position:fixed;left:18px;bottom:20px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:13px 16px;box-shadow:var(--shadow);z-index:998;max-width:310px;display:none}
+    .social-proof b{color:var(--red)}
+    .social-proof small{display:block;color:var(--muted)}
+    footer{background:#061c3e;color:#dbeafe;padding:28px 0;text-align:center}
+    .floating{position:fixed;right:18px;bottom:18px;display:grid;gap:10px;z-index:999}
+    .float{padding:13px 18px;border-radius:999px;color:#fff;font-weight:900;box-shadow:0 12px 28px rgba(0,0,0,.22)}
+    .float.call{background:var(--red)} .float.zalo{background:#0068ff}
+
+    @media(max-width:960px){.topbar .container,.hero-grid,.quick-grid,.features,.deal-grid,.split,.spec-grid,.package-grid,.reviews,.hot-grid,.video-grid{grid-template-columns:1fr 1fr}.nav{display:none}.video-card video{height:360px}}
+    @media(max-width:640px){.topbar .container,.hero-grid,.quick-grid,.features,.deal-grid,.split,.spec-grid,.package-grid,.reviews,.hot-grid,.video-grid,.video-lead{grid-template-columns:1fr}.header-inner{height:auto;flex-wrap:wrap;justify-content:center;text-align:center;padding:12px 0}.head-call{justify-content:center}.hero-grid{padding:38px 0}.hero h1{font-size:39px}.cta-row{display:grid}.btn{width:100%}.floating{left:12px;right:12px;grid-template-columns:1fr 1fr}.float{text-align:center;padding:12px 8px}.video-card video{height:430px}.social-proof{left:12px;right:12px;bottom:90px;max-width:none}}
+  
+    .marquee-bar{background:linear-gradient(90deg,#c91515,#ff7a00);color:#fff;overflow:hidden;white-space:nowrap;font-weight:900}
+    .marquee-track{display:inline-block;padding:9px 0;animation:marquee 22s linear infinite}
+    .marquee-track span{margin-right:44px}
+    @keyframes marquee{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+    .sales-stats{background:#fff;padding:24px 0;border-bottom:1px solid var(--border)}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .stat-card{background:linear-gradient(180deg,#fff,#f8fafc);border:1px solid var(--border);border-radius:18px;padding:18px;text-align:center;box-shadow:0 10px 26px rgba(15,23,42,.07)}
+    .stat-card strong{display:block;color:var(--red);font-size:30px;line-height:1}
+    .stat-card span{color:#334155;font-weight:800}
+    .stock-box{background:#fff;border:1px solid #fecaca;border-radius:20px;padding:20px;box-shadow:var(--shadow);margin-top:20px}
+    .stock-head{display:flex;justify-content:space-between;gap:12px;font-weight:900;color:var(--red);margin-bottom:10px}
+    .stock-progress{height:18px;background:#fee2e2;border-radius:999px;overflow:hidden}
+    .stock-progress div{width:76%;height:100%;background:linear-gradient(90deg,#c91515,#ff7a00);border-radius:999px;animation:pulsebar 1.8s infinite}
+    @keyframes pulsebar{0%,100%{filter:brightness(1)}50%{filter:brightness(1.25)}}
+    .bonus-banner{background:linear-gradient(135deg,#fff7ed,#ffffff);border:2px dashed #f97316;border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+    .bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+    .bonus-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+    .bonus-item{background:#fff;border:1px solid #fed7aa;border-radius:14px;padding:14px;font-weight:900}
+    .bonus-item:before{content:"🎁 ";margin-right:4px}
+    .map-zalo{background:#fff}
+    .map-grid{display:grid;grid-template-columns:1fr .85fr;gap:22px;align-items:stretch}
+    .map-card,.qr-card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+    .map-frame{height:300px;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:#e2e8f0}
+    .map-frame iframe{width:100%;height:100%;border:0}
+    .qr-box{height:230px;border:2px dashed #60a5fa;border-radius:18px;display:grid;place-items:center;text-align:center;background:#eff6ff;color:#004aad;font-weight:900;padding:18px}
+    .qr-box .big{font-size:54px;display:block;margin-bottom:8px}
+    .sticky-quote{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:1000;background:linear-gradient(180deg,#e63225,#b80e0e);color:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 14px 30px rgba(0,0,0,.28);display:flex;gap:10px;align-items:center}
+    .viewer-pill{position:fixed;right:18px;top:110px;z-index:999;background:#fff;border:1px solid var(--border);border-radius:999px;padding:10px 14px;box-shadow:var(--shadow);font-weight:900;color:var(--blue)}
+    .viewer-pill b{color:var(--red)}
+    .exit-pop{position:fixed;inset:0;background:rgba(2,6,23,.62);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+    .exit-box{background:#fff;border-radius:24px;padding:28px;max-width:520px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    .exit-box h2{color:var(--red);font-size:32px;margin:0 0 8px}
+    .exit-close{position:absolute;margin-left:230px;margin-top:-18px;background:#111827;color:#fff;border:0;border-radius:50%;width:34px;height:34px;cursor:pointer}
+    .shake{animation:shake 1.4s infinite}
+    @keyframes shake{0%,100%{transform:translateX(0)}10%,30%,50%{transform:translateX(-2px)}20%,40%,60%{transform:translateX(2px)}}
+    @media(max-width:960px){.stats-grid,.bonus-grid,.map-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.stats-grid,.bonus-grid,.bonus-list,.map-grid{grid-template-columns:1fr}.sticky-quote{left:12px;right:12px;transform:none;justify-content:center;bottom:80px}.viewer-pill{top:auto;right:12px;bottom:142px}.map-frame{height:260px}}
+
+  </style>
+</head>
+<body>
+
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>🚚 Miễn phí vận chuyển toàn quốc theo chương trình</span>
+      <span>🎁 Tặng dao cắt + dây cước + bình pha xăng</span>
+      <span>🔥 Ưu đãi Hus Pro 545 trong hôm nay</span>
+      <span>📞 Hotline/Zalo: 0888.656.119</span>
+    </div>
+  </div>
+
+  <div class="topbar"><div class="container">
+    <div class="topitem"><span>🏅</span><div>Hàng chính hãng<small>Nguồn gốc rõ ràng</small></div></div>
+    <div class="topitem"><span>🛡️</span><div>Bảo hành uy tín<small>Hỗ trợ nhanh chóng</small></div></div>
+    <div class="topitem"><span>🚚</span><div>Giao hàng toàn quốc<small>Kiểm tra khi nhận</small></div></div>
+    <div class="topitem"><span>☎</span><div>Hotline/Zalo<small>0888.656.119</small></div></div>
+  </div></div>
+
+  <header class="header"><div class="container header-inner">
+    <a class="logo" href="#"><span class="logo-mark">PQ</span><span><b>ĐIỆN MÁY<br>PHÚ QUÝ</b><em>Mang Phú Quý tới nhà bạn</em></span></a>
+    <nav class="nav"><a href="#video">Video thực tế</a><a href="#uu-dai">Ưu đãi</a><a href="#thong-so">Thông số</a><a href="#dat-hang">Đăng ký</a></nav>
+    <div class="head-call"><i>☎</i><div><small>Tư vấn & đặt hàng</small><b>0888.656.119</b></div></div>
+  </div></header>
+
+  <section class="hero" id="tong-quan">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">🔥 VIDEO GIAO KHÁCH THỰC TẾ - ƯU ĐÃI HÔM NAY</div>
+        <h1>Máy cắt cỏ <span>Hus Pro 545</span></h1>
+        <p>Mạnh mẽ - Bền bỉ - Phù hợp phát cỏ vườn, ruộng, bờ ao, trang trại và dịch vụ làm vườn.</p>
+        <ul class="hero-list">
+          <li>Có 4 video thực tế giao khách và test máy</li>
+          <li>Tặng kèm phụ kiện theo chương trình hôm nay</li>
+          <li>Giao hàng nhanh - được kiểm tra khi nhận</li>
+          <li>Liên hệ ngay để nhận giá tốt trong ngày</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-red" href="#dat-hang">🔥 Đăng ký nhận ưu đãi</a>
+          <a class="btn btn-outline" href="#video">▶ Xem video thực tế</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/545-poster.png" alt="Máy cắt cỏ Hus Pro 545">
+        <div class="price-box">
+          <strong>Giá: Liên hệ nhận giá tốt hôm nay</strong>
+          <span>Không để giá cố định - tư vấn đúng cấu hình và phụ kiện</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="video-section">
+    <div class="container">
+      <div class="title">
+        <span>Video thực tế giao khách</span>
+        <h2>Xem máy thật - giao khách thật</h2>
+        <p>Video thực tế là bằng chứng bán hàng mạnh nhất, giúp khách tin tưởng trước khi gọi hoặc nhắn Zalo.</p>
+      </div>
+      <div class="video-lead">
+        <div><b>🔥 4 video thực tế khi giao hàng cho khách</b><p>Có hàng thật, giao thật, khách xem là dễ chốt hơn.</p></div>
+        <a class="btn btn-red" href="#dat-hang">Nhận báo giá ngay</a>
+      </div>
+      <div class="video-grid">
+        <div class="video-card"><video controls playsinline preload="metadata" src="assets/videos/giao-khach-1.mp4"></video><div class="video-caption"><b>Video 1: Giao máy thực tế</b><span>Khách xem hàng thật trước khi mua.</span></div></div>
+        <div class="video-card"><video controls playsinline preload="metadata" src="assets/videos/giao-khach-2.mp4"></video><div class="video-caption"><b>Video 2: Kiểm tra máy</b><span>Tạo độ tin cậy trước khi đặt hàng.</span></div></div>
+        <div class="video-card"><video controls playsinline preload="metadata" src="assets/videos/giao-khach-3.mp4"></video><div class="video-caption"><b>Video 3: Máy thực tế</b><span>Cận cảnh sản phẩm và phụ kiện.</span></div></div>
+        <div class="video-card"><video controls playsinline preload="metadata" src="assets/videos/giao-khach-4.mp4"></video><div class="video-caption"><b>Video 4: Chốt giao khách</b><span>Gia tăng niềm tin và thúc đẩy liên hệ.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hot-strip" id="uu-dai">
+    <div class="container hot-grid">
+      <div class="hot-title">Ưu đãi đang mở cho Hus Pro 545 <small>Đăng ký sớm để được tư vấn và giữ chương trình tốt trong ngày</small></div>
+      <div class="countdown">
+        <div class="timebox"><b id="h">02</b><span>Giờ</span></div>
+        <div class="timebox"><b id="m">59</b><span>Phút</span></div>
+        <div class="timebox"><b id="s">59</b><span>Giây</span></div>
+      </div>
+      <div class="stock">⚠️ Số lượng ưu đãi hôm nay có hạn - ưu tiên khách đăng ký trước</div>
+    </div>
+  </div>
+
+
+  <section class="sales-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><strong id="soldCount">1.287</strong><span>máy đã bán</span></div>
+        <div class="stat-card"><strong id="viewerCount">23</strong><span>người đang xem</span></div>
+        <div class="stat-card"><strong>4.9/5</strong><span>đánh giá khách hàng</span></div>
+        <div class="stat-card"><strong>12</strong><span>máy ưu đãi còn lại</span></div>
+      </div>
+      <div class="stock-box">
+        <div class="stock-head"><span>🔥 Đã đăng ký hôm nay: 38/50 suất</span><span>Còn 12 suất ưu đãi</span></div>
+        <div class="stock-progress"><div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quick"><div class="container quick-grid">
+    <div class="quick-card"><i>🎁</i><div><b>Quà tặng kèm</b><small>Lưỡi cắt / phụ kiện theo chương trình</small></div></div>
+    <div class="quick-card"><i>📦</i><div><b>Kiểm tra khi nhận</b><small>An tâm trước khi thanh toán</small></div></div>
+    <div class="quick-card"><i>🚚</i><div><b>Giao hàng toàn quốc</b><small>Nhanh chóng - an toàn</small></div></div>
+    <div class="quick-card"><i>🛠️</i><div><b>Hỗ trợ kỹ thuật</b><small>Hướng dẫn sử dụng</small></div></div>
+  </div></div>
+
+  <section id="uu-diem"><div class="container">
+    <div class="title"><span>Ưu điểm nổi bật</span><h2>Vì sao nên chọn máy cắt cỏ Hus Pro 545?</h2><p>Các điểm mạnh được trình bày nhanh để khách hiểu ngay và hành động ngay.</p></div>
+    <div class="features">
+      <div class="feature"><i>⚙️</i><h3>Động cơ mạnh</h3><p>Phù hợp phát cỏ dày, cỏ vườn, bờ ruộng và khu vực nhiều cây bụi.</p></div>
+      <div class="feature"><i>🍃</i><h3>Tiết kiệm nhiên liệu</h3><p>Vận hành ổn định, phù hợp dùng thường xuyên cho gia đình và dịch vụ.</p></div>
+      <div class="feature"><i>🧰</i><h3>Dễ bảo trì</h3><p>Phụ tùng phổ biến, dễ thay thế, dễ vệ sinh sau khi sử dụng.</p></div>
+      <div class="feature"><i>💪</i><h3>Bền bỉ</h3><p>Thiết kế chắc chắn, phù hợp điều kiện làm việc ngoài vườn, ruộng.</p></div>
+    </div>
+  </div></section>
+
+  <section class="deal"><div class="container deal-grid">
+    <div class="deal-box">
+      <h2>Đăng ký hôm nay nhận ưu đãi</h2>
+      <p>Không hiển thị giá cố định để tránh sai lệch theo từng lô hàng. Khách để lại số điện thoại để được báo giá nhanh và chính xác.</p>
+      <ul class="gift-list">
+        <li>Tư vấn chọn đúng lưỡi cắt theo loại cỏ</li>
+        <li>Hướng dẫn lắp ráp và khởi động ban đầu</li>
+        <li>Hỗ trợ phụ kiện đi kèm theo nhu cầu</li>
+        <li>Ưu tiên giao hàng nhanh cho khách đặt trước</li>
+      </ul>
+      <a class="btn btn-red" href="tel:0888656119">☎ Gọi ngay 0888.656.119</a>
+    </div>
+    <div class="reg-card" id="dat-hang">
+      <h3>Nhận báo giá Hus Pro 545 trong hôm nay</h3>
+      <form onsubmit="event.preventDefault(); alert('Cảm ơn anh/chị! Vui lòng gọi 0888.656.119 hoặc nhắn Zalo để được xử lý nhanh nhất.');">
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="tel" placeholder="Số điện thoại" required>
+        <select required>
+          <option value="">Nhu cầu sử dụng</option>
+          <option>Dùng gia đình / nhà vườn</option>
+          <option>Dùng cho trang trại</option>
+          <option>Làm dịch vụ cắt cỏ</option>
+          <option>Cần tư vấn thêm</option>
+        </select>
+        <textarea placeholder="Ghi chú: diện tích cần cắt, loại cỏ, khu vực giao hàng..."></textarea>
+        <button class="btn btn-yellow" style="width:100%" type="submit">🔥 Đăng ký nhận ưu đãi</button>
+      </form>
+    </div>
+  </div></section>
+
+
+  <section>
+    <div class="container">
+      <div class="bonus-banner">
+        <div class="bonus-grid">
+          <div>
+            <div class="title" style="text-align:left;margin-bottom:10px">
+              <span>Quà tặng & Freeship</span>
+              <h2>Đăng ký hôm nay nhận gói ưu đãi đi kèm</h2>
+              <p>Ưu đãi giúp khách dùng máy ngay, giảm chi phí mua phụ kiện ban đầu.</p>
+            </div>
+            <div class="bonus-list">
+              <div class="bonus-item">Dao cắt cỏ</div>
+              <div class="bonus-item">Dây cước</div>
+              <div class="bonus-item">Bình pha xăng</div>
+              <div class="bonus-item">Bộ đồ nghề</div>
+            </div>
+          </div>
+          <div class="deal-box">
+            <h2>🚚 Miễn phí vận chuyển</h2>
+            <p><b>Áp dụng theo chương trình hôm nay.</b> Khách được tư vấn hình thức giao hàng phù hợp, kiểm tra hàng khi nhận.</p>
+            <a class="btn btn-red shake" href="#dat-hang">🔥 Nhận báo giá + quà tặng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="container split">
+    <div class="photo-card"><img src="assets/545-real.jpg" alt="Máy cắt cỏ Hus Pro 545 thực tế"></div>
+    <div class="content-card">
+      <h2>Phù hợp với ai?</h2>
+      <ul class="checklist">
+        <li>Gia đình có vườn, bãi cỏ, khu đất cần phát dọn định kỳ</li>
+        <li>Nhà vườn, trang trại nhỏ, khu cây ăn quả</li>
+        <li>Người làm dịch vụ cắt cỏ, phát quang</li>
+        <li>Đơn vị cần máy khỏe, dễ bảo trì, phụ kiện dễ thay</li>
+        <li>Khách muốn được tư vấn kỹ trước khi mua</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section id="thong-so" class="specs"><div class="container">
+    <div class="title"><span>Thông số tạo niềm tin</span><h2>Điểm nổi bật cần biết trước khi mua</h2><p>Trình bày ngắn, rõ, dễ hiểu để khách nhanh chóng để lại thông tin.</p></div>
+    <div class="spec-grid">
+      <div class="spec"><b>Dòng sản phẩm</b><span>Máy cắt cỏ Hus Pro 545</span></div>
+      <div class="spec"><b>Công dụng chính</b><span>Cắt cỏ, phát dọn, làm vườn</span></div>
+      <div class="spec"><b>Phù hợp</b><span>Vườn, ruộng, trang trại, dịch vụ</span></div>
+      <div class="spec"><b>Ưu điểm</b><span>Khỏe - bền - dễ dùng</span></div>
+      <div class="spec"><b>Phụ kiện</b><span>Lưỡi cắt, dây đeo, tay cầm</span></div>
+      <div class="spec"><b>Tư vấn</b><span>Chọn đúng cấu hình theo nhu cầu</span></div>
+    </div>
+    <div class="note">Thông số có thể thay đổi theo từng lô hàng. Vui lòng liên hệ để được tư vấn chính xác.</div>
+  </div></section>
+
+  <section><div class="container">
+    <div class="title"><span>Bộ sản phẩm</span><h2>Khi mua sẽ được tư vấn đầy đủ phụ kiện</h2></div>
+    <div class="package-grid">
+      <div class="package"><h3>01. Máy chính</h3><ul><li>Đầu máy Hus Pro 545</li><li>Cần cắt và tay cầm</li><li>Bình nhiên liệu</li></ul></div>
+      <div class="package"><h3>02. Phụ kiện sử dụng</h3><ul><li>Lưỡi cắt phù hợp</li><li>Dây đeo vai</li><li>Tấm chắn cỏ</li></ul></div>
+      <div class="package"><h3>03. Hỗ trợ sau mua</h3><ul><li>Hướng dẫn lắp ráp</li><li>Hướng dẫn khởi động</li><li>Tư vấn bảo quản</li></ul></div>
+    </div>
+  </div></section>
+
+  <section><div class="container">
+    <div class="title"><span>Đánh giá khách hàng</span><h2>Khách hàng nói gì?</h2></div>
+    <div class="reviews">
+      <div class="review"><div class="stars">★★★★★</div><p>Máy khỏe, phát cỏ nhanh. Được hướng dẫn sử dụng khá kỹ.</p><b>Anh Nam - Sóc Sơn</b></div>
+      <div class="review"><div class="stars">★★★★★</div><p>Tư vấn nhiệt tình, biết nên chọn lưỡi nào cho từng loại cỏ.</p><b>Anh Dũng - Mê Linh</b></div>
+      <div class="review"><div class="stars">★★★★★</div><p>Giao hàng nhanh, đóng gói chắc, máy đúng như tư vấn.</p><b>Khách hàng Hà Nội</b></div>
+    </div>
+  </div></section>
+
+  <section><div class="container">
+    <div class="title"><span>Câu hỏi thường gặp</span><h2>Giải đáp nhanh trước khi mua</h2></div>
+    <div class="faq">
+      <details open><summary>Máy Hus Pro 545 có phù hợp cắt cỏ vườn không?</summary><p>Có. Máy phù hợp phát cỏ vườn, bờ ruộng, bãi cỏ và các khu vực cần máy khỏe, bền.</p></details>
+      <details><summary>Có giao hàng toàn quốc không?</summary><p>Có hỗ trợ giao hàng theo khu vực. Khách có thể kiểm tra hàng khi nhận theo chính sách tư vấn cụ thể.</p></details>
+      <details><summary>Có cần tư vấn phụ kiện không?</summary><p>Nên tư vấn trước để chọn đúng lưỡi cắt, dây đeo và phụ kiện phù hợp nhu cầu sử dụng.</p></details>
+    </div>
+  </div></section>
+
+
+  <section class="map-zalo">
+    <div class="container map-grid">
+      <div class="map-card">
+        <div class="title" style="text-align:left;margin-bottom:16px">
+          <span>Địa chỉ cửa hàng</span>
+          <h2>Điện Máy Phú Quý</h2>
+          <p>KĐT Long Việt, Quang Minh, Hà Nội. Khách có thể gọi trước để được tư vấn và hẹn giao hàng.</p>
+        </div>
+        <div class="map-frame">
+          <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=K%C4%90T%20Long%20Vi%E1%BB%87t%2C%20Quang%20Minh%2C%20H%C3%A0%20N%E1%BB%99i&output=embed"></iframe>
+        </div>
+      </div>
+      <div class="qr-card">
+        <div class="title" style="text-align:left;margin-bottom:16px">
+          <span>Chat nhanh qua Zalo</span>
+          <h2>Quét QR hoặc bấm Zalo</h2>
+          <p>Hiện đang để khung QR. Khi anh gửi ảnh QR Zalo thật, em sẽ thay vào ngay.</p>
+        </div>
+        <div class="qr-box"><div><span class="big">📱</span>QR Zalo<br>0888.656.119</div></div>
+        <br>
+        <a class="btn btn-red" style="width:100%" href="https://zalo.me/0888656119" target="_blank">💬 Chat Zalo ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="container">
+    <b>Điện Máy Phú Quý - Mang Phú Quý tới nhà bạn</b><br>
+    Hotline/Zalo: 0888.656.119 | Địa chỉ: KĐT Long Việt, Quang Minh, Hà Nội<br>
+    ©2022 Điện Máy Phú Quý. All rights reserved.
+  </div></footer>
+
+  <div class="floating">
+    <a class="float call" href="tel:0888656119">☎ Gọi ngay</a>
+    <a class="float zalo" href="https://zalo.me/0888656119" target="_blank">💬 Zalo</a>
+  </div>
+
+  <div id="proof" class="social-proof"><b>🔥 Anh Nam - Sóc Sơn vừa hỏi máy Hus Pro 545</b><small>Đội ngũ đang tư vấn báo giá trong hôm nay</small></div>
+
+
+  <a class="sticky-quote shake" href="#dat-hang">📊 Nhận báo giá Hus Pro 545 hôm nay</a>
+  <div class="viewer-pill">👀 <b id="viewerFloating">23</b> người đang xem</div>
+
+  <div id="exitPop" class="exit-pop">
+    <div class="exit-box">
+      <button class="exit-close" onclick="document.getElementById('exitPop').style.display='none'">×</button>
+      <h2>Khoan đã!</h2>
+      <p>Anh/chị có muốn nhận báo giá ưu đãi Hus Pro 545 trong hôm nay không?</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-red" href="#dat-hang" onclick="document.getElementById('exitPop').style.display='none'">🔥 Nhận báo giá</a>
+        <a class="btn btn-yellow" href="tel:0888656119">☎ Gọi ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let total = 2*60*60 + 59*60 + 59;
+    function tick(){
+      const h = Math.floor(total/3600), m = Math.floor((total%3600)/60), s = total%60;
+      document.getElementById('h').textContent = String(h).padStart(2,'0');
+      document.getElementById('m').textContent = String(m).padStart(2,'0');
+      document.getElementById('s').textContent = String(s).padStart(2,'0');
+      total = total > 0 ? total - 1 : 2*60*60 + 59*60 + 59;
+    }
+    tick(); setInterval(tick,1000);
+
+    const proof = document.getElementById('proof');
+    const msgs = [
+      '🔥 Anh Nam - Sóc Sơn vừa hỏi máy Hus Pro 545',
+      '📞 Chị Hương - Đông Anh vừa để lại số điện thoại',
+      '🚚 Khách Mê Linh đang hỏi giao hàng trong hôm nay',
+      '🎁 Anh Dũng vừa hỏi phụ kiện tặng kèm'
+    ];
+    let idx = 0;
+    setInterval(() => {
+      proof.style.display = 'block';
+      proof.querySelector('b').textContent = msgs[idx % msgs.length];
+      idx++;
+      setTimeout(() => proof.style.display = 'none', 5200);
+    }, 9000);
+
+    setInterval(() => {
+      const v = 18 + Math.floor(Math.random()*13);
+      const vc = document.getElementById('viewerCount');
+      const vf = document.getElementById('viewerFloating');
+      if(vc) vc.textContent = v;
+      if(vf) vf.textContent = v;
+    }, 4500);
+
+    let exitShown = false;
+    document.addEventListener('mouseleave', (e) => {
+      if(!exitShown && e.clientY < 5){
+        exitShown = true;
+        const p = document.getElementById('exitPop');
+        if(p) p.style.display = 'flex';
+      }
+    });
+
+  </script>
+</body>
+</html>
