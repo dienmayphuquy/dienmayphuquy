@@ -1,0 +1,28 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Leads");
+  if (!sheet) {
+    sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet("Leads");
+    sheet.appendRow(["Thời gian", "Họ tên", "Số điện thoại", "Nhu cầu", "Ghi chú", "Sản phẩm", "Trang"]);
+  }
+
+  var p = e.parameter;
+  sheet.appendRow([
+    new Date(),
+    p.name || "",
+    p.phone || "",
+    p.need || "",
+    p.note || "",
+    p.product || "",
+    p.page || ""
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ result: "success" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput("Điện Máy Phú Quý Lead Form is running.")
+    .setMimeType(ContentService.MimeType.TEXT);
+}
