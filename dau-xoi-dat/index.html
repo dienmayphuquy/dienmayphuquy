@@ -29,25 +29,49 @@
 .gallery-mini img{border-radius:8px;height:112px;object-fit:cover;border:1px solid var(--line)}
 @media(max-width:420px){.gallery-mini img{height:96px}}
 
+
+.sample-head h1{font-size:21px;line-height:1.3;margin:8px 0 6px;font-weight:900}
+.mall-tag{display:inline-block;background:#ee2b2b;color:#fff;border-radius:4px;font-size:12px;font-weight:900;padding:5px 7px}
+.quick-line{font-size:14px;color:#555;line-height:1.45}
+.variant-box{padding:12px 0 0}
+.variant-title{font-weight:900;margin-bottom:8px}
+.variant{display:block;border:1px solid #ddd;border-radius:8px;padding:11px 10px;margin-bottom:8px;background:#fff;font-size:14px}
+.variant.active{border-color:#ee2b2b;background:#fff2f2;color:#d71920}
+.variant.hot{border-color:#ff8a00;background:#fff7e6}
+.gx35-box{background:#fff;border-bottom:8px solid var(--bg);padding:14px 12px}
+.gx35-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.gx35-info{padding:12px}
+.gx35-info h2{font-size:18px;color:var(--blue);margin:0 0 8px}
+.gx35-info p{font-size:14px;line-height:1.55;color:#444;margin:0 0 10px}
+.gx35-btn{display:block;background:linear-gradient(180deg,#ff3232,#c90000);color:#fff;text-align:center;border-radius:6px;padding:12px;font-weight:900}
+
 </style>
 </head>
 <body>
 <main class="page">
   <div class="topbar"><a class="back" href="#">‹</a><div class="top-title">Đầu Xới Đất lắp máy cắt cỏ</div><div class="dots">⋯</div></div>
-  <div class="hero-img"><img src="assets/product.jpg" alt="Đầu xới đất lắp máy cắt cỏ"></div>
+  <div class="hero-img"><img src="assets/product-hero.jpg" alt="Đầu xới đất lắp máy cắt cỏ"></div>
   <nav class="nav"><a class="active" href="#tong-quan">Tổng quan</a><a href="#danh-gia">Đánh giá</a><a href="#mo-ta">Mô tả</a><a href="#dat-hang">Đề xuất</a></nav>
 
   <section id="tong-quan" class="product">
-    <span class="tag">Ưu đãi độc quyền - Cam kết giá tốt nhất!</span>
-    <h1>Đầu Xới Đất Lắp Máy Cắt Cỏ Xăng</h1>
-    <div class="sub">Sản phẩm hàng đầu: phụ kiện máy nông nghiệp bán chạy</div>
-    <div class="rate-row"><span class="stars">★★★★★ 4.9/5</span><span class="sold">Đã bán 13,4k</span><span>32 mặt hàng</span></div>
-    <div class="pricebox">
-      <div class="price-label">Giá tốt nhất</div>
-      <div><span class="price">750.000đ</span><span class="old">1.500.000đ</span></div>
-      <span class="save">Tiết kiệm tới 50%</span>
+    <div class="sample-head">
+      <div class="mall-tag">🔥 ƯU ĐÃI HÔM NAY</div>
+      <h1>Đầu Xới Đất Lắp Máy Cắt Cỏ Xăng</h1>
+      <div class="quick-line">Biến máy cắt cỏ thành máy xới mini - xới đất, xạc cỏ, lên luống</div>
     </div>
-    <div class="timer-row"><span>⚡ Ưu đãi giờ vàng - Kết thúc sau</span><span class="timer"><b id="h">00</b>:<b id="m">00</b>:<b id="s">00</b></span></div>
+    <div class="rate-row"><span class="stars">★★★★★ 4.9/5</span><span class="sold">Đã bán 13,4k</span><span>5321 đánh giá</span></div>
+    <div class="pricebox">
+      <div class="price-label">Giá sốc hôm nay</div>
+      <div><span class="price">750.000đ</span><span class="old">1.500.000đ</span></div>
+      <span class="save">Giảm 50% + miễn phí vận chuyển</span>
+    </div>
+    <div class="timer-row"><span>⚡ Kết thúc ưu đãi sau</span><span class="timer"><b id="h">00</b>:<b id="m">00</b>:<b id="s">00</b></span></div>
+    <div class="variant-box">
+      <div class="variant-title">Chọn gói mua hàng</div>
+      <a href="#dat-hang" class="variant active">1 đầu xới đất: <b>750.000đ</b></a>
+      <a href="#dat-hang" class="variant">2 đầu xới đất: <b>1.400.000đ</b></a>
+      <a href="#gx35" class="variant hot">Combo đầu xới + máy GX35: <b>2.800.000đ</b></a>
+    </div>
   </section>
 
   <div class="policy">
@@ -61,6 +85,18 @@
     <div class="ship-row"><span>🚚 Vận chuyển dự kiến</span><b>3 - 4 ngày</b></div>
     <div class="ship-row"><span>Miễn phí vận chuyển</span><b>Toàn quốc</b></div>
     <div class="ship-row"><span>Chính sách đổi trả</span><span>14 ngày nếu không ưng ý</span></div>
+  </section>
+
+  <section id="gx35" class="gx35-box">
+    <h2 class="sec-title">Combo mua kèm máy GX35 <span>Nếu chưa có máy</span></h2>
+    <div class="gx35-card">
+      <img src="assets/gx35-combo.jpg" alt="Combo đầu xới đất và máy cắt cỏ GX35">
+      <div class="gx35-info">
+        <h2>Máy cắt cỏ Honda GX35 + đầu xới đất</h2>
+        <p>Phù hợp khách chưa có máy cắt cỏ. Một bộ dùng được cho cắt cỏ, xới đất, xạc cỏ và làm vườn nhỏ.</p>
+        <a class="gx35-btn" href="#dat-hang">Chọn combo GX35</a>
+      </div>
+    </div>
   </section>
 
   <section class="shop">
@@ -93,7 +129,7 @@
   <section class="section">
     <h2 class="sec-title">Ảnh sản phẩm & giao hàng <span>Shop thật</span></h2>
     <div class="gallery-mini">
-      <img src="assets/product.jpg" alt="Đầu xới đất">
+      <img src="assets/product-hero.jpg" alt="Đầu xới đất">
       <img src="assets/xoi-dat-thuc-te.jpg" alt="Công dụng đầu xới">
       <img src="assets/dong-goi.jpg" alt="Đóng gói giao hàng">
     </div>
