@@ -18,6 +18,17 @@
 .footer{background:#111;color:#ddd;padding:18px 12px;font-size:13px;line-height:1.6}.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);height:64px;background:#fff;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;padding:8px;box-shadow:0 -4px 16px rgba(0,0,0,.15);z-index:30}.bottom a{border-radius:6px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:14px}.call{background:#e11d1d}.zalo{background:#0068ff}.buy{background:#ff6a00}
 .float-sale{position:fixed;right:12px;bottom:78px;background:var(--red);color:#fff;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:900;z-index:25;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 @media(min-width:760px){.page{box-shadow:0 0 30px rgba(0,0,0,.12)}body{background:#ddd}}
+
+.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.media-grid img{border-radius:8px;border:1px solid var(--line)}
+.video-box{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.video-box img{opacity:.82}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(238,43,43,.92);display:grid;place-items:center;color:#fff;font-size:34px;font-weight:900;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.caption{font-size:13px;color:#555;margin-top:8px;line-height:1.45}
+.gallery-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.gallery-mini img{border-radius:8px;height:112px;object-fit:cover;border:1px solid var(--line)}
+@media(max-width:420px){.gallery-mini img{height:96px}}
+
 </style>
 </head>
 <body>
@@ -65,6 +76,29 @@
     <div class="coupon"><div>🎁 Giảm 50% khách hàng đầu tiên</div><div>🚚 Free Ship toàn quốc</div></div>
   </section>
 
+  <section class="section">
+    <h2 class="sec-title">Video & hình ảnh thực tế <span>Xem nhanh</span></h2>
+    <div class="video-box">
+      <img src="assets/video-thumb.jpg" alt="Video test đầu xới đất">
+      <div class="play">▶</div>
+    </div>
+    <div class="caption">Gợi ý: sau này anh thay ảnh này bằng video thật quay cảnh lắp đầu xới vào máy cắt cỏ và xới đất ngoài vườn.</div>
+    <div style="height:12px"></div>
+    <div class="media-grid">
+      <img src="assets/xoi-dat-thuc-te.jpg" alt="Xới đất thực tế">
+      <img src="assets/xac-co.jpg" alt="Xạc cỏ làm luống">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-title">Ảnh sản phẩm & giao hàng <span>Shop thật</span></h2>
+    <div class="gallery-mini">
+      <img src="assets/product.jpg" alt="Đầu xới đất">
+      <img src="assets/xoi-dat-thuc-te.jpg" alt="Công dụng đầu xới">
+      <img src="assets/dong-goi.jpg" alt="Đóng gói giao hàng">
+    </div>
+  </section>
+
   <section id="danh-gia" class="section">
     <h2 class="sec-title">Đánh giá của khách hàng <span>(5311)</span></h2>
     <div class="rating-bars">
@@ -76,7 +110,7 @@
   </section>
 
   <section id="mo-ta" class="section desc">
-    <h2>Đầu xới cỏ lắp máy cắt cỏ xăng</h2>
+    <h2>Đầu xới cỏ lắp máy cắt cỏ xăng</h2><img src="assets/xoi-dat-thuc-te.jpg" alt="Đầu xới đất thực tế" style="border-radius:10px;margin-bottom:12px">
     <h3>Hướng dẫn lắp đầu xới</h3>
     <p>Đầu xới đất lắp vào máy cắt cỏ xăng, giúp biến máy cắt cỏ thành máy xới mini để xới đất, xạc cỏ, lên luống.</p>
     <h3>Xới đất cứng, đất đá dễ dàng</h3>
