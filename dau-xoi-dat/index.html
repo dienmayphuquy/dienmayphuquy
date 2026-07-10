@@ -1,205 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Đầu Xới Đất Lắp Máy Cắt Cỏ - Điện Máy Phú Quý</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đầu xới đất lắp máy cắt cỏ - Điện Máy Phú Quý</title>
 <style>
-:root{--red:#ee2b2b;--orange:#ff6a00;--yellow:#ffd400;--blue:#003b88;--text:#222;--muted:#777;--bg:#f4f4f4;--line:#e8e8e8}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--text);padding-bottom:72px}a{text-decoration:none;color:inherit}img{width:100%;display:block}.page{max-width:520px;margin:0 auto;background:#fff;min-height:100vh}
-.topbar{height:46px;background:#fff;display:flex;align-items:center;gap:10px;padding:0 12px;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}.back{font-size:28px;color:#333}.top-title{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}.dots{font-size:24px}
-.hero-img{background:#eee}.nav{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-bottom:1px solid var(--line);position:sticky;top:46px;z-index:19}.nav a{text-align:center;padding:11px 2px;font-size:14px;color:#333}.nav a.active{color:var(--red);border-bottom:2px solid var(--red);font-weight:700}
-.product{padding:12px;background:#fff}.tag{display:inline-block;background:#ffe9e9;color:var(--red);font-size:12px;font-weight:700;border-radius:4px;padding:4px 6px;margin-bottom:8px}h1{font-size:20px;line-height:1.3;margin:0 0 8px;font-weight:800}.sub{font-size:13px;color:var(--muted);margin-bottom:8px}.rate-row{display:flex;gap:10px;align-items:center;font-size:13px;color:#777;margin:8px 0;flex-wrap:wrap}.stars{color:#ffb400;font-weight:700}.sold{color:#555}.pricebox{background:linear-gradient(90deg,#ff4e18,#ff8b00);color:#fff;margin:12px -12px 0;padding:13px 12px}.price-label{font-size:13px;opacity:.95}.price{font-size:31px;font-weight:900;line-height:1.1}.old{text-decoration:line-through;opacity:.85;margin-left:8px;font-size:15px}.save{background:#fff;color:var(--red);display:inline-block;padding:3px 6px;border-radius:4px;font-size:12px;font-weight:700;margin-top:5px}.timer-row{display:flex;align-items:center;justify-content:space-between;background:#fff7e6;color:#9a4a00;padding:9px 12px;margin:0 -12px;font-size:13px}.timer b{background:#333;color:#fff;border-radius:3px;padding:3px 5px;margin:0 1px}
-.policy{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.policy div{padding:12px 4px;text-align:center;font-size:12px;color:#333;border-right:1px solid var(--line)}.policy div:last-child{border-right:0}.policy i{display:block;font-style:normal;font-size:22px;margin-bottom:4px}
-.ship{background:#fff;padding:12px;border-bottom:8px solid var(--bg)}.ship-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:6px 0}.ship b{color:#0a8f35}.shop{background:#fff;padding:14px 12px;border-bottom:8px solid var(--bg)}.shop-head{display:flex;gap:10px;align-items:center}.logo{width:52px;height:52px;border-radius:50%;background:var(--yellow);border:4px solid var(--blue);display:grid;place-items:center;color:var(--blue);font-weight:900;flex:0 0 52px}.shop-name{font-weight:900;color:var(--blue)}.shop-meta{font-size:12px;color:#777;margin-top:3px}.shop-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;text-align:center}.shop-stats div{background:#f7f7f7;border-radius:8px;padding:8px;font-size:12px}.shop-stats b{display:block;color:var(--red);font-size:16px}
-.section{background:#fff;border-bottom:8px solid var(--bg);padding:14px 12px}.sec-title{font-size:18px;font-weight:900;margin:0 0 12px;color:#222;display:flex;align-items:center;justify-content:space-between}.sec-title span{font-size:13px;color:var(--red);font-weight:500}.coupon{display:grid;grid-template-columns:1fr 1fr;gap:8px}.coupon div{background:#fff3e5;border:1px dashed #ff9f43;color:#b95000;border-radius:8px;padding:10px;font-size:13px;font-weight:700}.review{border-bottom:1px solid var(--line);padding:12px 0}.review:last-child{border-bottom:0}.review-name{font-weight:700;margin-bottom:4px}.review p{font-size:14px;line-height:1.5;margin:6px 0;color:#333}.review small{color:#888}.rating-bars{display:grid;gap:6px;margin-top:10px;font-size:13px}.bar{height:8px;background:#eee;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:#ffb400}
-.desc h2{font-size:20px;text-align:center;color:var(--red);margin:8px 0 12px;text-transform:uppercase}.desc h3{font-size:17px;margin:16px 0 8px;color:var(--blue)}.desc p,.desc li{font-size:15px;line-height:1.6}.desc ul{padding-left:20px}.spec{border:1px solid var(--line);border-radius:8px;overflow:hidden}.spec-row{display:grid;grid-template-columns:42% 58%;border-bottom:1px solid var(--line);font-size:14px}.spec-row:last-child{border-bottom:0}.spec-row b{background:#f7f7f7;padding:10px}.spec-row span{padding:10px}
-.order{background:#fff;padding:16px 12px;border-bottom:8px solid var(--bg)}.order-title{text-align:center;color:var(--red);font-size:22px;font-weight:900;line-height:1.25;margin-bottom:12px}.order-note{text-align:center;color:#555;font-size:14px;margin-bottom:12px}input,select,textarea{width:100%;height:44px;border:1px solid #ddd;border-radius:6px;padding:0 12px;margin-bottom:10px;font-size:15px}textarea{height:78px;padding-top:10px}.submit{height:48px;background:linear-gradient(180deg,#ff3232,#c90000);color:#fff;border:0;border-radius:6px;width:100%;font-size:18px;font-weight:900}
-.footer{background:#111;color:#ddd;padding:18px 12px;font-size:13px;line-height:1.6}.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);height:64px;background:#fff;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;padding:8px;box-shadow:0 -4px 16px rgba(0,0,0,.15);z-index:30}.bottom a{border-radius:6px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:14px}.call{background:#e11d1d}.zalo{background:#0068ff}.buy{background:#ff6a00}
-.float-sale{position:fixed;right:12px;bottom:78px;background:var(--red);color:#fff;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:900;z-index:25;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-@media(min-width:760px){.page{box-shadow:0 0 30px rgba(0,0,0,.12)}body{background:#ddd}}
-
-.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.media-grid img{border-radius:8px;border:1px solid var(--line)}
-.video-box{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
-.video-box img{opacity:.82}
-.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(238,43,43,.92);display:grid;place-items:center;color:#fff;font-size:34px;font-weight:900;box-shadow:0 6px 18px rgba(0,0,0,.35)}
-.caption{font-size:13px;color:#555;margin-top:8px;line-height:1.45}
-.gallery-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.gallery-mini img{border-radius:8px;height:112px;object-fit:cover;border:1px solid var(--line)}
-@media(max-width:420px){.gallery-mini img{height:96px}}
-
-
-.sample-head h1{font-size:21px;line-height:1.3;margin:8px 0 6px;font-weight:900}
-.mall-tag{display:inline-block;background:#ee2b2b;color:#fff;border-radius:4px;font-size:12px;font-weight:900;padding:5px 7px}
-.quick-line{font-size:14px;color:#555;line-height:1.45}
-.variant-box{padding:12px 0 0}
-.variant-title{font-weight:900;margin-bottom:8px}
-.variant{display:block;border:1px solid #ddd;border-radius:8px;padding:11px 10px;margin-bottom:8px;background:#fff;font-size:14px}
-.variant.active{border-color:#ee2b2b;background:#fff2f2;color:#d71920}
-.variant.hot{border-color:#ff8a00;background:#fff7e6}
-.gx35-box{background:#fff;border-bottom:8px solid var(--bg);padding:14px 12px}
-.gx35-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
-.gx35-info{padding:12px}
-.gx35-info h2{font-size:18px;color:var(--blue);margin:0 0 8px}
-.gx35-info p{font-size:14px;line-height:1.55;color:#444;margin:0 0 10px}
-.gx35-btn{display:block;background:linear-gradient(180deg,#ff3232,#c90000);color:#fff;text-align:center;border-radius:6px;padding:12px;font-weight:900}
-
+:root{--red:#e51d24;--orange:#ff6a00;--blue:#003b88;--yellow:#ffd400;--bg:#f3f3f3;--line:#e8e8e8}
+*{box-sizing:border-box}body{margin:0;background:#d9d9d9;font-family:Arial,Helvetica,sans-serif;color:#222;padding-bottom:70px}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+.page{width:min(520px,100%);margin:auto;background:#fff;min-height:100vh}
+.topbar{height:46px;display:flex;align-items:center;gap:10px;padding:0 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:20}.topbar b{flex:1}.dots{font-size:24px}
+.titlebar{background:var(--red);color:#fff;font-weight:900;padding:13px 16px;font-size:17px}
+.gallery{background:#fff;border-bottom:8px solid var(--bg)}.main-wrap{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}.main{width:100%;height:100%;object-fit:contain}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgba(0,0,0,.38);color:#fff;font-size:34px;width:38px;height:56px;z-index:3}.prev{left:0;border-radius:0 8px 8px 0}.next{right:0;border-radius:8px 0 0 8px}.count{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.55);color:#fff;border-radius:99px;padding:5px 9px;font-size:12px}
+.thumbs{display:flex;gap:7px;overflow-x:auto;padding:9px;scrollbar-width:none}.thumbs::-webkit-scrollbar{display:none}.thumb{width:64px;height:64px;flex:0 0 64px;padding:0;border:2px solid transparent;border-radius:6px;background:#fff;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover}.thumb.active{border-color:var(--red)}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:#fff;position:sticky;top:46px;z-index:19}.nav a{text-align:center;padding:11px 2px;font-size:13px}.nav a:first-child{color:var(--red);border-bottom:2px solid var(--red);font-weight:700}
+.product{padding:12px;border-bottom:8px solid var(--bg)}.tag{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:900;border-radius:4px;padding:5px 7px}h1{font-size:21px;line-height:1.3;margin:9px 0 6px}.sub{font-size:14px;color:#555;line-height:1.45}.rating{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;margin:9px 0}.stars{color:#ffb400;font-weight:900}
+.price{background:linear-gradient(90deg,#ff4d13,#ff8b00);color:#fff;padding:13px;margin:10px -12px -12px}.price b{font-size:31px}.old{text-decoration:line-through;opacity:.8;margin-left:8px}.save{display:inline-block;background:#fff;color:var(--red);padding:4px 7px;border-radius:4px;font-size:12px;font-weight:900;margin-top:5px}
+.policy{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:8px solid var(--bg)}.policy div{text-align:center;padding:12px 3px;font-size:11px;border-right:1px solid var(--line)}.policy i{display:block;font-style:normal;font-size:23px;margin-bottom:4px}
+.sec{padding:14px 12px;border-bottom:8px solid var(--bg)}.sec h2{font-size:19px;margin:0 0 12px}.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.review-grid img,.install img,.combo img{border-radius:8px;border:1px solid var(--line)}
+.combo-card{border:1px solid var(--line);border-radius:9px;overflow:hidden}.combo-info{padding:11px}.combo-info b{color:var(--blue)}.combo-btn{display:block;background:var(--red);color:#fff;text-align:center;padding:12px;border-radius:6px;font-weight:900;margin-top:9px}
+.spec{border:1px solid var(--line);border-radius:8px;overflow:hidden}.row{display:grid;grid-template-columns:42% 58%;border-bottom:1px solid var(--line);font-size:14px}.row:last-child{border-bottom:0}.row b{background:#f7f7f7;padding:10px}.row span{padding:10px}
+.order{padding:16px 12px}.order h2{text-align:center;color:var(--red);font-size:22px}input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;margin-bottom:9px;font-size:15px}textarea{min-height:75px}button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:linear-gradient(#ff3232,#c90000);color:#fff;font-size:18px;font-weight:900}
+.bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(520px,100%);height:64px;background:#fff;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;padding:8px;box-shadow:0 -4px 16px rgba(0,0,0,.18);z-index:30}.bottom a{display:grid;place-items:center;color:#fff;border-radius:6px;font-weight:900}.call{background:var(--red)}.zalo{background:#0068ff}.buy{background:var(--orange)}
 </style>
 </head>
 <body>
 <main class="page">
-  <div class="topbar"><a class="back" href="#">‹</a><div class="top-title">Đầu Xới Đất lắp máy cắt cỏ</div><div class="dots">⋯</div></div>
-  <div class="hero-img"><img src="assets/product-hero.jpg" alt="Đầu xới đất lắp máy cắt cỏ"></div>
-  <nav class="nav"><a class="active" href="#tong-quan">Tổng quan</a><a href="#danh-gia">Đánh giá</a><a href="#mo-ta">Mô tả</a><a href="#dat-hang">Đề xuất</a></nav>
+<div class="topbar"><span>‹</span><b>Đầu Xới Đất lắp máy cắt cỏ</b><span class="dots">⋯</span></div>
+<div class="titlebar">ĐẦU XỚI ĐẤT LẮP MÁY CẮT CỎ</div>
 
-  <section id="tong-quan" class="product">
-    <div class="sample-head">
-      <div class="mall-tag">🔥 ƯU ĐÃI HÔM NAY</div>
-      <h1>Đầu Xới Đất Lắp Máy Cắt Cỏ Xăng</h1>
-      <div class="quick-line">Biến máy cắt cỏ thành máy xới mini - xới đất, xạc cỏ, lên luống</div>
-    </div>
-    <div class="rate-row"><span class="stars">★★★★★ 4.9/5</span><span class="sold">Đã bán 13,4k</span><span>5321 đánh giá</span></div>
-    <div class="pricebox">
-      <div class="price-label">Giá sốc hôm nay</div>
-      <div><span class="price">750.000đ</span><span class="old">1.500.000đ</span></div>
-      <span class="save">Giảm 50% + miễn phí vận chuyển</span>
-    </div>
-    <div class="timer-row"><span>⚡ Kết thúc ưu đãi sau</span><span class="timer"><b id="h">00</b>:<b id="m">00</b>:<b id="s">00</b></span></div>
-    <div class="variant-box">
-      <div class="variant-title">Chọn gói mua hàng</div>
-      <a href="#dat-hang" class="variant active">1 đầu xới đất: <b>750.000đ</b></a>
-      <a href="#dat-hang" class="variant">2 đầu xới đất: <b>1.400.000đ</b></a>
-      <a href="#gx35" class="variant hot">Combo đầu xới + máy GX35: <b>2.800.000đ</b></a>
-    </div>
-  </section>
-
-  <div class="policy">
-    <div><i>💵</i>Thanh toán khi nhận</div>
-    <div><i>↩️</i>Đổi trả 30 ngày</div>
-    <div><i>📦</i>Kiểm tra hàng</div>
-    <div><i>🛡️</i>Bảo hành 12 tháng</div>
+<section class="gallery">
+  <div class="main-wrap">
+    <button class="arrow prev">‹</button>
+    <img id="mainImage" class="main" src="assets/product-01.jpg" alt="Đầu xới đất">
+    <button class="arrow next">›</button>
+    <div class="count"><span id="current">1</span>/8</div>
   </div>
+  <div class="thumbs"><button class="thumb active" data-i="0"><img src="assets/product-01.jpg"></button><button class="thumb" data-i="1"><img src="assets/product-02.jpg"></button><button class="thumb" data-i="2"><img src="assets/product-03.jpg"></button><button class="thumb" data-i="3"><img src="assets/product-04.jpg"></button><button class="thumb" data-i="4"><img src="assets/product-05.jpg"></button><button class="thumb" data-i="5"><img src="assets/product-06.jpg"></button><button class="thumb" data-i="6"><img src="assets/product-07.jpg"></button><button class="thumb" data-i="7"><img src="assets/product-08.jpg"></button></div>
+</section>
 
-  <section class="ship">
-    <div class="ship-row"><span>🚚 Vận chuyển dự kiến</span><b>3 - 4 ngày</b></div>
-    <div class="ship-row"><span>Miễn phí vận chuyển</span><b>Toàn quốc</b></div>
-    <div class="ship-row"><span>Chính sách đổi trả</span><span>14 ngày nếu không ưng ý</span></div>
-  </section>
+<nav class="nav"><a href="#tongquan">Tổng quan</a><a href="#danhgia">Đánh giá</a><a href="#mota">Mô tả</a><a href="#dathang">Đề xuất</a></nav>
 
-  <section id="gx35" class="gx35-box">
-    <h2 class="sec-title">Combo mua kèm máy GX35 <span>Nếu chưa có máy</span></h2>
-    <div class="gx35-card">
-      <img src="assets/gx35-combo.jpg" alt="Combo đầu xới đất và máy cắt cỏ GX35">
-      <div class="gx35-info">
-        <h2>Máy cắt cỏ Honda GX35 + đầu xới đất</h2>
-        <p>Phù hợp khách chưa có máy cắt cỏ. Một bộ dùng được cho cắt cỏ, xới đất, xạc cỏ và làm vườn nhỏ.</p>
-        <a class="gx35-btn" href="#dat-hang">Chọn combo GX35</a>
-      </div>
-    </div>
-  </section>
+<section id="tongquan" class="product">
+  <span class="tag">🔥 ƯU ĐÃI HÔM NAY</span>
+  <h1>Đầu Xới Đất Lắp Máy Cắt Cỏ Xăng</h1>
+  <div class="sub">Biến máy cắt cỏ thành máy xới mini - xới đất, xạc cỏ, lên luống, làm vườn.</div>
+  <div class="rating"><span class="stars">★★★★★ 4.9/5</span><span>Đã bán 13,4k</span><span>5321 đánh giá</span></div>
+  <div class="price">Giá sốc hôm nay<br><b>750.000đ</b><span class="old">1.500.000đ</span><br><span class="save">Giảm 50% + miễn phí vận chuyển</span></div>
+</section>
 
-  <section class="shop">
-    <div class="shop-head">
-      <div class="logo">PQ</div>
-      <div><div class="shop-name">ĐIỆN MÁY PHÚ QUÝ</div><div class="shop-meta">Shop đã được xác minh · Hỗ trợ kỹ thuật</div></div>
-    </div>
-    <div class="shop-stats"><div><b>4.9/5</b>Đánh giá</div><div><b>32</b>Mặt hàng</div><div><b>13,4k</b>Đã bán</div></div>
-  </section>
+<section class="policy">
+  <div><i>📦</i>Thanh toán khi nhận</div><div><i>↩️</i>Đổi trả 7 ngày</div><div><i>🚚</i>Miễn phí vận chuyển</div><div><i>🛡️</i>Bảo hành 12 tháng</div>
+</section>
 
-  <section class="section">
-    <h2 class="sec-title">Ưu đãi độc quyền <span>Nhận ngay</span></h2>
-    <div class="coupon"><div>🎁 Giảm 50% khách hàng đầu tiên</div><div>🚚 Free Ship toàn quốc</div></div>
-  </section>
+<section class="sec combo">
+  <h2>Combo máy cắt cỏ lắp đầu xới</h2>
+  <div class="combo-card"><img src="assets/bo-may-balo.jpg" alt="Bộ máy balo lắp đầu xới"><div class="combo-info"><b>Chưa có máy cắt cỏ?</b><p>Chọn bộ máy balo hoặc GX35 lắp sẵn đầu xới, giao về dùng ngay.</p><a class="combo-btn" href="#dathang">Nhận báo giá combo</a></div></div>
+</section>
 
-  <section class="section">
-    <h2 class="sec-title">Video & hình ảnh thực tế <span>Xem nhanh</span></h2>
-    <div class="video-box">
-      <img src="assets/video-thumb.jpg" alt="Video test đầu xới đất">
-      <div class="play">▶</div>
-    </div>
-    <div class="caption">Gợi ý: sau này anh thay ảnh này bằng video thật quay cảnh lắp đầu xới vào máy cắt cỏ và xới đất ngoài vườn.</div>
-    <div style="height:12px"></div>
-    <div class="media-grid">
-      <img src="assets/xoi-dat-thuc-te.jpg" alt="Xới đất thực tế">
-      <img src="assets/xac-co.jpg" alt="Xạc cỏ làm luống">
-    </div>
-  </section>
+<section id="danhgia" class="sec">
+  <h2>Đánh giá của khách hàng</h2>
+  <div class="review-grid"><img src="assets/review-1.jpg" alt="Đánh giá khách hàng 1"><img src="assets/review-2.jpg" alt="Đánh giá khách hàng 2"></div>
+</section>
 
-  <section class="section">
-    <h2 class="sec-title">Ảnh sản phẩm & giao hàng <span>Shop thật</span></h2>
-    <div class="gallery-mini">
-      <img src="assets/product-hero.jpg" alt="Đầu xới đất">
-      <img src="assets/xoi-dat-thuc-te.jpg" alt="Công dụng đầu xới">
-      <img src="assets/dong-goi.jpg" alt="Đóng gói giao hàng">
-    </div>
-  </section>
+<section class="sec install">
+  <h2>Hướng dẫn lắp đặt sản phẩm</h2>
+  <img src="assets/huong-dan-lap.png" alt="Hướng dẫn lắp đầu xới">
+</section>
 
-  <section id="danh-gia" class="section">
-    <h2 class="sec-title">Đánh giá của khách hàng <span>(5311)</span></h2>
-    <div class="rating-bars">
-      <div>5 ⭐ (26.2k)<div class="bar"><span style="width:96%"></span></div></div>
-      <div>4 ⭐ (0.7k)<div class="bar"><span style="width:22%"></span></div></div>
-    </div>
-    <div class="review"><div class="review-name">nguyen cuong</div><div class="stars">★★★★★</div><p>Đã nhận được hàng. Đóng gói cẩn thận, shop tư vấn chu đáo nhiệt tình. Sản phẩm đúng với quảng cáo.</p><small>14-03-2023 · Hữu ích!</small></div>
-    <div class="review"><div class="review-name">Trần Minh Đức</div><div class="stars">★★★★★</div><p>Nhận được hàng rất nhanh. Lắp máy chạy thử làm việc rất tốt. Rất tiện cho nhà nông.</p><small>14-03-2023 · Hữu ích!</small></div>
-  </section>
+<section id="mota" class="sec">
+  <h2>Thông số sản phẩm</h2>
+  <div class="spec"><div class="row"><b>Tên sản phẩm</b><span>Đầu xới đất, xạc cỏ</span></div><div class="row"><b>Chiều rộng</b><span>Khoảng 30cm</span></div><div class="row"><b>Chiều sâu</b><span>Khoảng 18cm</span></div><div class="row"><b>Công dụng</b><span>Xới đất, làm tơi đất, xạc cỏ</span></div></div>
+</section>
 
-  <section id="mo-ta" class="section desc">
-    <h2>Đầu xới cỏ lắp máy cắt cỏ xăng</h2><img src="assets/xoi-dat-thuc-te.jpg" alt="Đầu xới đất thực tế" style="border-radius:10px;margin-bottom:12px">
-    <h3>Hướng dẫn lắp đầu xới</h3>
-    <p>Đầu xới đất lắp vào máy cắt cỏ xăng, giúp biến máy cắt cỏ thành máy xới mini để xới đất, xạc cỏ, lên luống.</p>
-    <h3>Xới đất cứng, đất đá dễ dàng</h3>
-    <ul><li>Thay thế xới bằng tay, tiết kiệm thời gian và công sức.</li><li>Diệt sạch cỏ dại, đánh bật tận gốc cỏ.</li><li>Dùng được cho nhiều dòng máy cắt cỏ xăng như Honda, Makita, Takuma, Hyundai.</li></ul>
-    <h3>Thông số chi tiết sản phẩm</h3>
-    <div class="spec">
-      <div class="spec-row"><b>Thương hiệu</b><span>Điện Máy Phú Quý</span></div>
-      <div class="spec-row"><b>Số răng</b><span>7 / 9 khía</span></div>
-      <div class="spec-row"><b>Tên sản phẩm</b><span>Đầu xới đất, xạc cỏ</span></div>
-      <div class="spec-row"><b>Chiều rộng</b><span>30cm</span></div>
-      <div class="spec-row"><b>Chiều cao</b><span>18cm</span></div>
-      <div class="spec-row"><b>Công dụng</b><span>Xới đất, làm tơi đất, xạc cỏ</span></div>
-    </div>
-    <h3>Máy cắt cỏ xăng Honda GX35 mua kèm nếu chưa có máy</h3>
-    <ul><li>Dung tích xi-lanh: 35.8cc</li><li>Công suất tối đa: 1.6HP</li><li>Dung tích nhiên liệu: 0.65L</li><li>Kiểu tay ga: bóp cò</li></ul>
-  </section>
-
-  <section id="dat-hang" class="order">
-    <div class="order-title">Vui lòng điền thông tin bên dưới<br>để mua với giá ưu đãi!</div>
-    <div class="order-note">Sau khi đăng ký thành công sẽ có nhân viên gọi tư vấn chốt đơn.</div>
-    <form id="leadForm">
-      <input name="name" required placeholder="Họ và tên">
-      <input name="phone" required type="tel" placeholder="Số điện thoại">
-      <select name="need"><option>Mua 1 cái đầu xới 750.000đ + miễn phí vận chuyển</option><option>Mua 2 cái đầu xới 1.400.000đ + miễn phí vận chuyển</option><option>Mua đầu xới + máy cắt cỏ GX35</option><option>Cần tư vấn thêm</option></select>
-      <textarea name="note" placeholder="Địa chỉ nhận hàng / ghi chú"></textarea>
-      <button class="submit">Mua ngay</button>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <b>ĐIỆN MÁY PHÚ QUÝ</b><br>
-    Hotline: 0888.656.119<br>
-    Website: dienmayphuquy.github.io/dienmayphuquy<br>
-    Địa chỉ: KĐT Long Việt, Quang Minh, Hà Nội
-  </footer>
+<section id="dathang" class="order">
+  <h2>Đăng ký nhận báo giá ưu đãi</h2>
+  <form id="leadForm"><input name="name" required placeholder="Họ và tên"><input name="phone" required type="tel" placeholder="Số điện thoại"><select name="need"><option>Mua đầu xới 750.000đ</option><option>Mua đầu xới + máy cắt cỏ</option><option>Cần tư vấn thêm</option></select><textarea name="note" placeholder="Địa chỉ / ghi chú"></textarea><button class="submit">Nhận báo giá ngay</button></form>
+</section>
 </main>
-
-<div class="float-sale">🔥 Còn ưu đãi hôm nay</div>
-<div class="bottom"><a class="call" href="tel:0888656119">☎ Gọi</a><a class="zalo" href="https://zalo.me/0888656119">Zalo</a><a class="buy" href="#dat-hang">Mua ngay</a></div>
-
+<div class="bottom"><a class="call" href="tel:0888656119">☎ Gọi</a><a class="zalo" href="https://zalo.me/0888656119">Zalo</a><a class="buy" href="#dathang">Mua ngay</a></div>
 <script>
-let total=2*60*60+59*60+59;
-function tick(){let h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60;document.getElementById('h').textContent=String(h).padStart(2,'0');document.getElementById('m').textContent=String(m).padStart(2,'0');document.getElementById('s').textContent=String(s).padStart(2,'0');total=total>0?total-1:2*60*60+59*60+59}
-tick();setInterval(tick,1000);
-const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbxi8wLAtgeWtpvK9EkqkGAkzT48KKX508KpkCl7lEudIWfIHY40qAy9DW5BNUiAteIWXA/exec';
-document.getElementById('leadForm').addEventListener('submit',async function(e){
- e.preventDefault();
- const btn=this.querySelector('button'); const old=btn.textContent; btn.textContent='Đang gửi...'; btn.disabled=true;
- const data=new FormData(this); data.append('product','Đầu xới đất lắp máy cắt cỏ'); data.append('page',location.href); data.append('time',new Date().toLocaleString('vi-VN'));
- try{await fetch(GOOGLE_SCRIPT_URL,{method:'POST',body:data,mode:'no-cors'}); alert('Đăng ký thành công! Điện Máy Phú Quý sẽ liên hệ tư vấn sớm.'); this.reset();}
- catch(err){alert('Chưa gửi được thông tin. Anh/chị vui lòng gọi/Zalo 0888.656.119.');}
- finally{btn.textContent=old;btn.disabled=false;}
-});
+const imgs=[1,2,3,4,5,6,7,8].map(i=>`assets/product-${String(i).padStart(2,'0')}.jpg`);
+let idx=0;const main=document.getElementById('mainImage'),cur=document.getElementById('current'),ths=[...document.querySelectorAll('.thumb')];
+function show(i){idx=(i+imgs.length)%imgs.length;main.src=imgs[idx];cur.textContent=idx+1;ths.forEach((t,j)=>t.classList.toggle('active',j===idx));ths[idx].scrollIntoView({inline:'center',block:'nearest'})}
+document.querySelector('.prev').onclick=()=>show(idx-1);document.querySelector('.next').onclick=()=>show(idx+1);ths.forEach((t,i)=>t.onclick=()=>show(i));
+let sx=0;main.addEventListener('touchstart',e=>sx=e.changedTouches[0].screenX,{passive:true});main.addEventListener('touchend',e=>{let d=e.changedTouches[0].screenX-sx;if(Math.abs(d)>45)show(idx+(d<0?1:-1))},{passive:true});
+const URL='https://script.google.com/macros/s/AKfycbxi8wLAtgeWtpvK9EkqkGAkzT48KKX508KpkCl7lEudIWfIHY40qAy9DW5BNUiAteIWXA/exec';document.getElementById('leadForm').addEventListener('submit',async function(e){e.preventDefault();const b=this.querySelector('button'),old=b.textContent;b.textContent='Đang gửi...';b.disabled=true;const data=new FormData(this);data.append('product','Đầu xới đất lắp máy cắt cỏ');data.append('page',location.href);try{await fetch(URL,{method:'POST',body:data,mode:'no-cors'});alert('Đăng ký thành công! Điện Máy Phú Quý sẽ liên hệ sớm.');this.reset()}catch{alert('Chưa gửi được. Vui lòng gọi 0888.656.119')}finally{b.textContent=old;b.disabled=false}});
 </script>
-</body>
-</html>
+</body></html>
