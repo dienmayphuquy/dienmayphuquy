@@ -1,0 +1,6 @@
+BẢN DẦU XỚI ĐẤT V1.1
+
+1. Đổi file index.html hiện tại bằng file index.html trong thư mục này.
+2. Tải 4 file trong thư mục assets lên thư mục assets hiện có trên GitHub.
+3. Không xóa các ảnh product-01.jpg...product-08.jpg và các tài nguyên cũ.
+4. Sau khi GitHub Pages cập nhật, nhấn Ctrl+F5 để tải lại không dùng cache.

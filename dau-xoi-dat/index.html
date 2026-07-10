@@ -152,6 +152,149 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 .combo-option strong{display:block;color:var(--red);margin-bottom:3px}
 .combo-option span{font-size:13px;color:#555;line-height:1.4}
 
+/* Hiệu ứng nhấn mạnh giá và ưu đãi giờ vàng */
+@keyframes priceGlow{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,212,0,0),0 8px 20px rgba(255,88,0,.18)}
+  50%{box-shadow:0 0 0 4px rgba(255,212,0,.38),0 10px 28px rgba(255,88,0,.38)}
+}
+@keyframes priceBeat{
+  0%,100%{transform:scale(1)}
+  45%{transform:scale(1.075)}
+  60%{transform:scale(1.02)}
+}
+@keyframes shimmerPrice{
+  0%{transform:translateX(-160%) skewX(-20deg)}
+  55%,100%{transform:translateX(360%) skewX(-20deg)}
+}
+@keyframes goldenPulse{
+  0%,100%{background-position:0% 50%;box-shadow:inset 0 0 0 1px rgba(255,174,0,.24)}
+  50%{background-position:100% 50%;box-shadow:inset 0 0 0 2px rgba(255,174,0,.52),0 0 18px rgba(255,174,0,.18)}
+}
+@keyframes boltFlash{
+  0%,100%{transform:scale(1) rotate(0);filter:drop-shadow(0 0 0 rgba(255,170,0,0))}
+  50%{transform:scale(1.35) rotate(-8deg);filter:drop-shadow(0 0 7px rgba(255,170,0,.95))}
+}
+@keyframes timerPop{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-2px)}
+}
+.price-highlight{
+  position:relative;
+  overflow:hidden;
+  animation:priceGlow 1.8s ease-in-out infinite;
+}
+.price-highlight::after{
+  content:"";
+  position:absolute;
+  top:0;left:-35%;
+  width:24%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);
+  animation:shimmerPrice 2.8s ease-in-out infinite;
+  pointer-events:none;
+}
+.price-kicker{
+  display:inline-block;
+  font-weight:800;
+  letter-spacing:.2px;
+  text-shadow:0 1px 2px rgba(0,0,0,.2);
+}
+.price-main{
+  display:inline-block;
+  transform-origin:left center;
+  animation:priceBeat 1.45s ease-in-out infinite;
+  text-shadow:0 2px 4px rgba(0,0,0,.2);
+}
+.golden-offer{
+  background:linear-gradient(110deg,#fff4ce,#fff9eb,#ffe4a3,#fff8e9);
+  background-size:240% 240%;
+  animation:goldenPulse 2.1s ease-in-out infinite;
+  font-weight:700;
+}
+.golden-text{display:flex;align-items:center;gap:3px}
+.bolt{display:inline-block;animation:boltFlash 1s ease-in-out infinite}
+.golden-offer .timer{white-space:nowrap;animation:timerPop 1s ease-in-out infinite}
+.golden-offer .timer b{
+  background:linear-gradient(#2d2d2d,#090909);
+  box-shadow:0 2px 5px rgba(0,0,0,.28);
+  min-width:27px;
+  display:inline-block;
+  text-align:center;
+}
+@media (prefers-reduced-motion:reduce){
+  .price-highlight,.price-highlight::after,.price-main,.golden-offer,.bolt,.golden-offer .timer{animation:none!important}
+}
+
+
+/* ===== BỔ SUNG V1.1: đánh giá, video và ảnh thực tế ===== */
+.social-proof{
+  margin:10px -12px -12px;
+  padding:9px 12px;
+  background:#fff1e8;
+  color:#c53b00;
+  border-top:1px solid rgba(255,255,255,.45);
+  font-size:13px;
+  font-weight:900;
+  text-align:center;
+  animation:socialBlink 1.8s ease-in-out infinite;
+}
+@keyframes socialBlink{
+  0%,100%{filter:brightness(1);transform:scale(1)}
+  50%{filter:brightness(1.08);transform:scale(1.01)}
+}
+.review-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  margin-left:6px;padding:3px 6px;border-radius:99px;
+  background:#eaf8ef;color:#138443;font-size:11px;font-weight:800;
+}
+.review-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:5px}
+.helpful{display:inline-block;margin-top:7px;color:#666;font-size:12px}
+.recent-review{position:relative;padding-left:12px}
+.recent-review::before{
+  content:"";position:absolute;left:0;top:13px;bottom:2px;width:3px;
+  border-radius:99px;background:linear-gradient(#ff6a00,#e51d24);
+}
+.media-section{background:linear-gradient(180deg,#fff,#fff8f1)}
+.video-list{display:grid;gap:12px}
+.video-card{
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  background:#111;box-shadow:0 5px 18px rgba(0,0,0,.08)
+}
+.video-card video{display:block;width:100%;max-height:520px;background:#000}
+.media-caption{background:#fff;padding:10px 11px}
+.media-caption b{display:block;color:var(--blue);margin-bottom:3px}
+.media-caption span{font-size:13px;color:#666}
+.real-gallery{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.real-photo{
+  position:relative;border:0;padding:0;background:#eee;border-radius:9px;
+  overflow:hidden;cursor:zoom-in;min-height:165px
+}
+.real-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.real-photo:hover img{transform:scale(1.035)}
+.real-photo span{
+  position:absolute;left:7px;right:7px;bottom:7px;padding:6px 7px;border-radius:6px;
+  background:rgba(0,0,0,.66);color:#fff;font-size:11px;text-align:left
+}
+.lightbox{
+  position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+  padding:18px;background:rgba(0,0,0,.9);z-index:100
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:6px}
+.lightbox-close{
+  position:absolute;right:14px;top:10px;border:0;background:#fff;color:#111;
+  width:38px;height:38px;border-radius:50%;font-size:25px;line-height:38px
+}
+.package:has(input:checked),.combo-option:has(input:checked){
+  border-color:var(--red);box-shadow:0 0 0 2px rgba(229,29,36,.12);background:#fff8f8
+}
+.combo-option{transition:border-color .2s,box-shadow .2s,background .2s}
+@media(max-width:390px){
+  .real-photo{min-height:145px}
+}
+@media(prefers-reduced-motion:reduce){
+  .social-proof{animation:none}
+}
+
 </style>
 </head>
 <body>
@@ -173,7 +316,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
   <a class="active" href="#tongquan">Tổng quan</a>
   <a href="#danhgia">Đánh giá</a>
   <a href="#mota">Mô tả</a>
-  <a href="#dathang">Đề xuất</a>
+  <a href="#dathang">Đặt hàng ngay</a>
 </nav>
 
 <section id="tongquan" class="product">
@@ -181,10 +324,18 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
   <h1>Đầu Xới Đất Lắp Máy Cắt Cỏ Xăng</h1>
   <div class="sub">Biến máy cắt cỏ thành máy xới mini — xới đất, xạc cỏ, lên luống, làm vườn.</div>
   <div class="rating"><span class="stars">★★★★★ 4.9/5</span><span>Đã bán 13,4k</span><span>5321 đánh giá</span></div>
-  <div class="price">Giá tốt nhất hôm nay<br><b>750.000đ</b><span class="old">1.500.000đ</span><br><span class="save">Tiết kiệm tới 50% + miễn phí vận chuyển</span></div>
+  <div class="price price-highlight">
+    <span class="price-kicker">✨ Giá tốt nhất hôm nay</span><br>
+    <b class="price-main">750.000đ</b><span class="old">1.500.000đ</span><br>
+    <span class="save">Tiết kiệm tới 50% + miễn phí vận chuyển</span>
+    <div class="social-proof">🔥 Hơn 13.400 khách đã quan tâm và lựa chọn sản phẩm</div>
+  </div>
 </section>
 
-<div class="timer-row"><span>⚡ Ưu đãi giờ vàng kết thúc sau</span><span class="timer"><b id="h">02</b>:<b id="m">59</b>:<b id="s">59</b></span></div>
+<div class="timer-row golden-offer">
+  <span class="golden-text"><span class="bolt">⚡</span> Ưu đãi giờ vàng kết thúc sau</span>
+  <span class="timer"><b id="h">02</b>:<b id="m">59</b>:<b id="s">59</b></span>
+</div>
 
 <section class="policy">
   <div><i>📦</i>Thanh toán khi nhận</div>
@@ -238,28 +389,101 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 </section>
 
 <section id="danhgia" class="sec">
-  <div class="sec-head"><h2>Đánh giá của khách hàng</h2><span>(5311)</span></div>
+  <div class="sec-head"><h2>Đánh giá của khách hàng</h2><span>(5.321)</span></div>
   <div class="review-grid">
-    <img src="assets/review-1.jpg" alt="Đánh giá khách hàng 1">
-    <img src="assets/review-2.jpg" alt="Đánh giá khách hàng 2">
+    <img src="assets/review-1.jpg" alt="Đánh giá khách hàng 1" loading="lazy">
+    <img src="assets/review-2.jpg" alt="Đánh giá khách hàng 2" loading="lazy">
   </div>
+
   <div class="review-text">
-    <div class="review-name">Nguyễn Cường <span class="stars">★★★★★</span></div>
+    <div class="review-name">Nguyễn Cường <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
     <p>Đã nhận được hàng. Đóng gói cẩn thận, shop tư vấn chu đáo nhiệt tình. Sản phẩm đúng với quảng cáo.</p>
-    <small>14-03-2023 · Hữu ích!</small>
+    <div class="review-meta"><small>14-03-2023</small><small>Hữu ích (19)</small></div>
   </div>
+
   <div class="review-text">
-    <div class="review-name">Trần Minh Đức <span class="stars">★★★★★</span></div>
+    <div class="review-name">Trần Minh Đức <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
     <p>Nhận hàng nhanh, lắp máy chạy thử làm việc rất tốt. Rất tiện cho nhà nông.</p>
-    <small>14-03-2023 · Hữu ích!</small>
+    <div class="review-meta"><small>14-03-2023</small><small>Hữu ích (14)</small></div>
   </div>
-  <h3>Đánh giá cửa hàng (26.8k)</h3>
+
+  <div class="review-text recent-review">
+    <div class="review-name">Anh Hùng <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
+    <p>Đầu xới chắc chắn, lắp vào máy khá nhanh. Shop gọi hướng dẫn kỹ trước khi sử dụng nên tôi dùng rất yên tâm.</p>
+    <div class="review-meta"><small>03-07-2026</small><small>Hữu ích (26)</small></div>
+  </div>
+
+  <div class="review-text recent-review">
+    <div class="review-name">Chị Hương <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
+    <p>Hàng được đóng gói cẩn thận, giao đúng mẫu. Dùng để làm luống rau và xạc cỏ tiện hơn làm thủ công rất nhiều.</p>
+    <div class="review-meta"><small>28-06-2026</small><small>Hữu ích (17)</small></div>
+  </div>
+
+  <div class="review-text recent-review">
+    <div class="review-name">Anh Khánh <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
+    <p>Đã dùng thử thực tế rồi mới đánh giá. Máy vận hành ổn, phần đầu xới bám đất tốt và shop hỗ trợ sau bán hàng nhanh.</p>
+    <div class="review-meta"><small>12-06-2026</small><small>Hữu ích (21)</small></div>
+  </div>
+
+  <h3>Đánh giá tổng quan</h3>
+  <div class="shop-stats">
+    <div class="shop-stat"><b>4.9/5</b>Điểm trung bình</div>
+    <div class="shop-stat"><b>13.400+</b>Lượt mua</div>
+    <div class="shop-stat"><b>98%</b>Khách hài lòng</div>
+  </div>
   <div class="rating-bars">
-    <div>5 ⭐ (26.2k)<div class="bar"><span style="width:97%"></span></div></div>
-    <div>4 ⭐ (0.7k)<div class="bar"><span style="width:23%"></span></div></div>
+    <div>5 ⭐ (5.180)<div class="bar"><span style="width:97%"></span></div></div>
+    <div>4 ⭐ (141)<div class="bar"><span style="width:23%"></span></div></div>
     <div>3 ⭐ (0)<div class="bar"><span style="width:0"></span></div></div>
   </div>
 </section>
+
+<section class="sec media-section" id="video-thuc-te">
+  <div class="sec-head"><h2>🎥 Video giao máy thực tế</h2><span>Video thật</span></div>
+  <div class="video-list">
+    <div class="video-card">
+      <video controls playsinline preload="metadata">
+        <source src="assets/video-giao-may.mp4" type="video/mp4">
+        Trình duyệt của bạn chưa hỗ trợ phát video.
+      </video>
+      <div class="media-caption">
+        <b>Giao máy và bàn giao cho khách</b>
+        <span>Hình ảnh thực tế trong quá trình giao sản phẩm.</span>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls playsinline preload="metadata">
+        <source src="assets/video-giao-may-va-that.mp4" type="video/mp4">
+        Trình duyệt của bạn chưa hỗ trợ phát video.
+      </video>
+      <div class="media-caption">
+        <b>Kiểm tra máy và hướng dẫn sử dụng</b>
+        <span>Video quay thực tế, giúp khách xem rõ sản phẩm trước khi đặt.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec media-section" id="anh-thuc-te">
+  <div class="sec-head"><h2>📸 Hình ảnh khách hàng thực tế</h2><span>Bấm để xem lớn</span></div>
+  <div class="real-gallery">
+    <button class="real-photo" type="button" data-full="assets/anh-khach-hang-01.jpg" aria-label="Xem ảnh giao và lắp máy">
+      <img src="assets/anh-khach-hang-01.jpg" alt="Khách hàng kiểm tra và lắp máy thực tế" loading="lazy">
+      <span>Kiểm tra, lắp ráp và hướng dẫn trước khi sử dụng</span>
+    </button>
+    <button class="real-photo" type="button" data-full="assets/anh-may-thuc-te-01.jpg" aria-label="Xem ảnh máy ngoài thực tế">
+      <img src="assets/anh-may-thuc-te-01.jpg" alt="Máy cắt cỏ sử dụng ngoài thực tế" loading="lazy">
+      <span>Máy sau khi được đưa vào sử dụng ngoài thực tế</span>
+    </button>
+  </div>
+</section>
+
+<div class="lightbox" id="photoLightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Đóng ảnh">×</button>
+  <img src="" alt="Ảnh thực tế phóng lớn">
+</div>
+
 
 <section class="sec install">
   <h2>HƯỚNG DẪN LẮP ĐẦU XỚI</h2>
@@ -388,12 +612,6 @@ function show(i){
     main.src=imgs[idx];
     cur.textContent=idx+1;
     ths.forEach((t,j)=>t.classList.toggle('active',j===idx));
-    const thumbBar=document.querySelector('.thumbs');
-    const activeThumb=ths[idx];
-    if(thumbBar&&activeThumb){
-      const target=activeThumb.offsetLeft-(thumbBar.clientWidth-activeThumb.clientWidth)/2;
-      thumbBar.scrollTo({left:Math.max(0,target),behavior:'smooth'});
-    }
     main.classList.remove('fade');
   },140);
 }
@@ -406,9 +624,9 @@ function interact(){
   clearTimeout(resumeTimer);
   resumeTimer=setTimeout(startAuto,5000);
 }
-document.querySelector('.prev').onclick=()=>{show(idx-1);interact()};
-document.querySelector('.next').onclick=()=>{show(idx+1);interact()};
-ths.forEach((t,i)=>t.onclick=()=>{show(i);interact()});
+document.querySelector('.prev').onclick=(e)=>{e.preventDefault();e.currentTarget.blur();show(idx-1);interact()};
+document.querySelector('.next').onclick=(e)=>{e.preventDefault();e.currentTarget.blur();show(idx+1);interact()};
+ths.forEach((t,i)=>t.onclick=(e)=>{e.preventDefault();e.currentTarget.blur();show(i);interact()});
 let sx=0;
 main.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;interact()},{passive:true});
 main.addEventListener('touchend',e=>{
@@ -453,6 +671,42 @@ document.getElementById('leadForm').addEventListener('submit',async function(e){
     b.textContent=old;b.disabled=false;
   }
 });
+
+// Ảnh thực tế: bấm để phóng lớn
+const photoLightbox=document.getElementById('photoLightbox');
+if(photoLightbox){
+  const lightboxImg=photoLightbox.querySelector('img');
+  document.querySelectorAll('.real-photo').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      lightboxImg.src=btn.dataset.full;
+      photoLightbox.classList.add('open');
+      photoLightbox.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    });
+  });
+  const closeLightbox=()=>{
+    photoLightbox.classList.remove('open');
+    photoLightbox.setAttribute('aria-hidden','true');
+    lightboxImg.src='';
+    document.body.style.overflow='';
+  };
+  photoLightbox.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
+  photoLightbox.addEventListener('click',e=>{if(e.target===photoLightbox)closeLightbox()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+}
+
+// Khi khách xem video, tạm dừng slider để trang nhẹ và đỡ gây phân tán
+document.querySelectorAll('video').forEach(video=>{
+  video.addEventListener('play',()=>{
+    clearInterval(autoTimer);
+    document.querySelectorAll('video').forEach(v=>{if(v!==video)v.pause()});
+  });
+  video.addEventListener('pause',()=>{
+    clearTimeout(resumeTimer);
+    resumeTimer=setTimeout(startAuto,2500);
+  });
+});
+
 </script>
 </body>
 </html>
