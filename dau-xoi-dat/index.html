@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>Đầu Xới Đất Lắp Máy Cắt Cỏ - Điện Máy Phú Quý</title>
-<meta name="description" content="Đầu xới đất lắp máy cắt cỏ xăng, xới đất, xạc cỏ, lên luống. Điện Máy Phú Quý giao hàng toàn quốc.">
+<meta name="description" content="Đầu xới đất lắp máy cắt cỏ đeo vai và đeo balo. Xem video hoạt động thực tế, nhận hàng kiểm tra rồi thanh toán, miễn phí vận chuyển toàn quốc.">
 <style>
 :root{
   --red:#e51d24;--orange:#ff6a00;--blue:#003b88;--yellow:#ffd400;
@@ -152,148 +152,53 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 .combo-option strong{display:block;color:var(--red);margin-bottom:3px}
 .combo-option span{font-size:13px;color:#555;line-height:1.4}
 
-/* Hiệu ứng nhấn mạnh giá và ưu đãi giờ vàng */
-@keyframes priceGlow{
-  0%,100%{box-shadow:0 0 0 0 rgba(255,212,0,0),0 8px 20px rgba(255,88,0,.18)}
-  50%{box-shadow:0 0 0 4px rgba(255,212,0,.38),0 10px 28px rgba(255,88,0,.38)}
-}
-@keyframes priceBeat{
-  0%,100%{transform:scale(1)}
-  45%{transform:scale(1.075)}
-  60%{transform:scale(1.02)}
-}
-@keyframes shimmerPrice{
-  0%{transform:translateX(-160%) skewX(-20deg)}
-  55%,100%{transform:translateX(360%) skewX(-20deg)}
-}
-@keyframes goldenPulse{
-  0%,100%{background-position:0% 50%;box-shadow:inset 0 0 0 1px rgba(255,174,0,.24)}
-  50%{background-position:100% 50%;box-shadow:inset 0 0 0 2px rgba(255,174,0,.52),0 0 18px rgba(255,174,0,.18)}
-}
-@keyframes boltFlash{
-  0%,100%{transform:scale(1) rotate(0);filter:drop-shadow(0 0 0 rgba(255,170,0,0))}
-  50%{transform:scale(1.35) rotate(-8deg);filter:drop-shadow(0 0 7px rgba(255,170,0,.95))}
-}
-@keyframes timerPop{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-2px)}
-}
-.price-highlight{
-  position:relative;
-  overflow:hidden;
-  animation:priceGlow 1.8s ease-in-out infinite;
-}
-.price-highlight::after{
-  content:"";
-  position:absolute;
-  top:0;left:-35%;
-  width:24%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);
-  animation:shimmerPrice 2.8s ease-in-out infinite;
-  pointer-events:none;
-}
-.price-kicker{
-  display:inline-block;
-  font-weight:800;
-  letter-spacing:.2px;
-  text-shadow:0 1px 2px rgba(0,0,0,.2);
-}
-.price-main{
-  display:inline-block;
-  transform-origin:left center;
-  animation:priceBeat 1.45s ease-in-out infinite;
-  text-shadow:0 2px 4px rgba(0,0,0,.2);
-}
-.golden-offer{
-  background:linear-gradient(110deg,#fff4ce,#fff9eb,#ffe4a3,#fff8e9);
-  background-size:240% 240%;
-  animation:goldenPulse 2.1s ease-in-out infinite;
-  font-weight:700;
-}
-.golden-text{display:flex;align-items:center;gap:3px}
-.bolt{display:inline-block;animation:boltFlash 1s ease-in-out infinite}
-.golden-offer .timer{white-space:nowrap;animation:timerPop 1s ease-in-out infinite}
-.golden-offer .timer b{
-  background:linear-gradient(#2d2d2d,#090909);
-  box-shadow:0 2px 5px rgba(0,0,0,.28);
-  min-width:27px;
-  display:inline-block;
-  text-align:center;
-}
-@media (prefers-reduced-motion:reduce){
-  .price-highlight,.price-highlight::after,.price-main,.golden-offer,.bolt,.golden-offer .timer{animation:none!important}
-}
+
+/* Tối ưu chuyển đổi V2.1 - giữ nguyên cấu trúc và URL */
+.hero-cta{display:block;margin-top:12px;background:linear-gradient(#ff7a00,#e84d00);color:#fff;text-align:center;padding:13px;border-radius:7px;font-weight:900;box-shadow:0 6px 16px rgba(232,77,0,.25)}
+.quick-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0 2px}
+.quick-trust div{background:#fff8e8;border:1px solid #ffd58a;border-radius:7px;text-align:center;padding:8px 4px;font-size:11px;font-weight:700;color:#7a4200}
+.order{background:linear-gradient(180deg,#fff8ec,#fff)}
+.order h2{margin:0 0 7px}
+.order-note{background:#fff;border:1px solid #ffd8a8;border-radius:8px;padding:10px;color:#5d431f}
+.combo-option{transition:.2s ease;cursor:pointer}
+.combo-option:has(input:checked){border:2px solid var(--orange);background:#fff7eb;box-shadow:0 5px 15px rgba(255,106,0,.12)}
+.order-assurance{display:grid;gap:6px;margin:10px 0 12px;font-size:13px;color:#245c36}
+.order-assurance div{background:#eefaf2;border-radius:6px;padding:8px}
+.trust-list{display:grid;gap:7px;font-size:13px}.trust-list div{background:#f6fbf7;border:1px solid #d7eedc;border-radius:7px;padding:9px;color:#245c36}
+.faq details{border:1px solid var(--line);border-radius:8px;padding:11px;margin-bottom:8px;background:#fff}.faq summary{font-weight:800;cursor:pointer}.faq p{margin:8px 0 0}
+.success-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;place-items:center;z-index:100;padding:18px}.success-modal.show{display:grid}.success-card{width:min(420px,100%);background:#fff;border-radius:14px;padding:22px;text-align:center;box-shadow:0 18px 55px rgba(0,0,0,.3)}.success-card h3{color:var(--green);font-size:22px;margin:4px 0 8px}.success-card button{border:0;background:var(--red);color:#fff;border-radius:7px;padding:11px 22px;font-weight:900}
+@media(max-width:380px){.quick-trust{grid-template-columns:1fr}.quick-trust div{font-size:12px;padding:7px}}
 
 
-/* ===== BỔ SUNG V1.1: đánh giá, video và ảnh thực tế ===== */
-.social-proof{
-  margin:10px -12px -12px;
-  padding:9px 12px;
-  background:#fff1e8;
-  color:#c53b00;
-  border-top:1px solid rgba(255,255,255,.45);
-  font-size:13px;
-  font-weight:900;
-  text-align:center;
-  animation:socialBlink 1.8s ease-in-out infinite;
-}
-@keyframes socialBlink{
-  0%,100%{filter:brightness(1);transform:scale(1)}
-  50%{filter:brightness(1.08);transform:scale(1.01)}
-}
-.review-badge{
-  display:inline-flex;align-items:center;gap:4px;
-  margin-left:6px;padding:3px 6px;border-radius:99px;
-  background:#eaf8ef;color:#138443;font-size:11px;font-weight:800;
-}
-.review-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:5px}
-.helpful{display:inline-block;margin-top:7px;color:#666;font-size:12px}
-.recent-review{position:relative;padding-left:12px}
-.recent-review::before{
-  content:"";position:absolute;left:0;top:13px;bottom:2px;width:3px;
-  border-radius:99px;background:linear-gradient(#ff6a00,#e51d24);
-}
-.media-section{background:linear-gradient(180deg,#fff,#fff8f1)}
-.video-list{display:grid;gap:12px}
-.video-card{
-  border:1px solid var(--line);border-radius:10px;overflow:hidden;
-  background:#111;box-shadow:0 5px 18px rgba(0,0,0,.08)
-}
-.video-card video{display:block;width:100%;max-height:520px;background:#000}
-.media-caption{background:#fff;padding:10px 11px}
-.media-caption b{display:block;color:var(--blue);margin-bottom:3px}
-.media-caption span{font-size:13px;color:#666}
-.real-gallery{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.real-photo{
-  position:relative;border:0;padding:0;background:#eee;border-radius:9px;
-  overflow:hidden;cursor:zoom-in;min-height:165px
-}
-.real-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
-.real-photo:hover img{transform:scale(1.035)}
-.real-photo span{
-  position:absolute;left:7px;right:7px;bottom:7px;padding:6px 7px;border-radius:6px;
-  background:rgba(0,0,0,.66);color:#fff;font-size:11px;text-align:left
-}
-.lightbox{
-  position:fixed;inset:0;display:none;align-items:center;justify-content:center;
-  padding:18px;background:rgba(0,0,0,.9);z-index:100
-}
-.lightbox.open{display:flex}
-.lightbox img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:6px}
-.lightbox-close{
-  position:absolute;right:14px;top:10px;border:0;background:#fff;color:#111;
-  width:38px;height:38px;border-radius:50%;font-size:25px;line-height:38px
-}
-.package:has(input:checked),.combo-option:has(input:checked){
-  border-color:var(--red);box-shadow:0 0 0 2px rgba(229,29,36,.12);background:#fff8f8
-}
-.combo-option{transition:border-color .2s,box-shadow .2s,background .2s}
-@media(max-width:390px){
-  .real-photo{min-height:145px}
-}
-@media(prefers-reduced-motion:reduce){
-  .social-proof{animation:none}
-}
+/* Bản V3: tập trung chuyển đổi, giữ nguyên URL/form */
+.product-v3 h1{font-size:25px;line-height:1.18;margin:10px 0 8px;color:#172033}
+.product-v3 .tag{background:#fff1dc;color:#9c4300;border:1px solid #ffd097}
+.price-v3{margin-top:14px;padding:13px;border-radius:10px;background:linear-gradient(135deg,#fff1dc,#fff8ee);border:1px solid #ffc876}
+.price-v3 span{display:block;font-size:13px;color:#704100;font-weight:700}.price-v3 b{display:block;color:var(--red);font-size:31px;line-height:1.15}.price-v3 small{display:block;margin-top:3px;color:#17713a;font-weight:800}
+.video-focus video{width:100%;display:block;background:#000;border-radius:10px;max-height:620px}.video-caption{font-size:13px;line-height:1.55;color:#555}.mid-cta{display:block;text-align:center;background:#0b6bce;color:#fff;padding:12px;border-radius:8px;font-weight:900}
+.shop-proof{display:grid;gap:8px;margin-top:12px}.shop-proof div{background:#f7f9fc;border-radius:7px;padding:9px;font-size:13px}
+.privacy-note{font-size:12px;color:#666;margin:-1px 0 10px;line-height:1.45}
+.order .combo-option strong{font-size:16px}.order .combo-option span{font-size:13px}
+.order .combo-option:nth-child(2)::after{content:"TIẾT KIỆM HƠN";margin-left:auto;background:#fff0d6;color:#a24a00;border-radius:999px;padding:4px 7px;font-size:10px;font-weight:900;white-space:nowrap}
+.bottom .buy{font-size:15px}.viewer,.timer-row{display:none!important}
+@media(max-width:380px){.product-v3 h1{font-size:22px}.price-v3 b{font-size:28px}.order .combo-option:nth-child(2)::after{display:none}}
+
+.video-card{position:relative;border:1px solid var(--line);border-radius:11px;padding:8px;background:#fff;margin-bottom:12px;box-shadow:0 5px 18px rgba(0,0,0,.06)}
+.video-card video{border-radius:8px;aspect-ratio:9/16;object-fit:contain;background:#000}
+.video-card b{display:block;font-size:15px;color:#123a69;margin:9px 3px 4px}
+.video-card p{margin:0 3px 6px;font-size:13px;color:#555}
+.video-label{position:absolute;z-index:2;top:15px;left:15px;background:#e51d24;color:#fff;font-size:11px;font-weight:900;border-radius:999px;padding:6px 9px;box-shadow:0 3px 10px rgba(0,0,0,.2)}
+.video-label.gray{background:rgba(20,28,40,.82)}
+.secondary-video{margin-top:14px}
+.compat-intro{margin-top:-2px;color:#555}
+.compat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.compat-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.compat-card img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#f5f5f5}
+.compat-card div{padding:10px}
+.compat-card b{display:block;color:var(--blue);margin-bottom:5px}
+.compat-card span{font-size:12px;line-height:1.45;color:#555}
+.compat-note{background:#fff7e8;border:1px solid #ffd08d;color:#724100;border-radius:8px;padding:10px;margin:11px 0;font-size:13px;line-height:1.45}
+@media(max-width:380px){.compat-grid{grid-template-columns:1fr}.compat-card{display:grid;grid-template-columns:42% 58%}.compat-card img{height:100%;aspect-ratio:auto}}
 
 </style>
 </head>
@@ -319,36 +224,55 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
   <a href="#dathang">Đặt hàng ngay</a>
 </nav>
 
-<section id="tongquan" class="product">
-  <span class="tag">🔥 ƯU ĐÃI ĐỘC QUYỀN - CAM KẾT GIÁ TỐT</span>
-  <h1>Đầu Xới Đất Lắp Máy Cắt Cỏ Xăng</h1>
-  <div class="sub">Biến máy cắt cỏ thành máy xới mini — xới đất, xạc cỏ, lên luống, làm vườn.</div>
-  <div class="rating"><span class="stars">★★★★★ 4.9/5</span><span>Đã bán 13,4k</span><span>5321 đánh giá</span></div>
-  <div class="price price-highlight">
-    <span class="price-kicker">✨ Giá tốt nhất hôm nay</span><br>
-    <b class="price-main">599.000đ</b><span class="old">1.100.000đ</span><br>
-    <span class="save">Tiết kiệm tới 50% + miễn phí vận chuyển</span>
-    <div class="social-proof">🔥 Hơn 13.400 khách đã quan tâm và lựa chọn sản phẩm</div>
+<section id="tongquan" class="product product-v3">
+  <span class="tag">ĐẦU XỚI LẮP VÀO MÁY CẮT CỎ</span>
+  <h1>Biến máy cắt cỏ thành máy xới đất mini</h1>
+  <div class="sub">Xới đất, xạc cỏ và làm tơi đất nhanh hơn — phù hợp làm vườn, trồng rau và chăm sóc gốc cây.</div>
+  <div class="price-v3"><span>Giá từ</span><b>599.000đ</b><small>Miễn phí vận chuyển toàn quốc</small></div>
+  <div class="quick-trust">
+    <div>✓ Nhận hàng rồi thanh toán</div>
+    <div>✓ Kiểm tra hàng trước</div>
+    <div>✓ Gọi tư vấn đúng loại máy</div>
   </div>
+  <a class="hero-cta" href="#dathang">CHỌN GÓI &amp; ĐẶT HÀNG NGAY</a>
 </section>
 
-<div class="timer-row golden-offer">
-  <span class="golden-text"><span class="bolt">⚡</span> Ưu đãi giờ vàng kết thúc sau</span>
-  <span class="timer"><b id="h">02</b>:<b id="m">59</b>:<b id="s">59</b></span>
-</div>
+<section class="sec video-focus">
+  <div class="sec-head"><h2>Xem đầu xới hoạt động thực tế</h2><span>Video thật</span></div>
+  <div class="video-card featured-video">
+    <div class="video-label">XEM NHANH 15 GIÂY</div>
+    <video controls playsinline preload="metadata" poster="assets/poster-xoi-ngan.jpg">
+      <source src="assets/video-xoi-ngan-15s.mp4" type="video/mp4">
+    </video>
+    <b>Đầu xới làm việc trực tiếp trên đất và cỏ</b>
+    <p>Video ngắn giúp anh/chị nhìn ngay hiệu quả xới thực tế trước khi chọn mua.</p>
+  </div>
+
+  <div class="video-card secondary-video">
+    <div class="video-label gray">VIDEO CHI TIẾT 71 GIÂY</div>
+    <video controls playsinline preload="none" poster="assets/poster-xoi-chi-tiet.jpg">
+      <source src="assets/video-xoi-chi-tiet-71s.mp4" type="video/mp4">
+    </video>
+    <b>Máy cắt cỏ gắn đầu xới vận hành thực tế</b>
+    <p>Xem kỹ cách máy vận hành, độ rung và khả năng làm tơi đất.</p>
+  </div>
+
+  <p class="video-caption"><b>Chưa chắc máy của anh/chị có lắp được?</b> Gửi ảnh máy qua Zalo hoặc để lại số điện thoại, Phú Quý sẽ kiểm tra loại trục và tư vấn đúng bộ trước khi giao.</p>
+  <a class="mid-cta" href="#dathang">KIỂM TRA MÁY &amp; NHẬN TƯ VẤN MIỄN PHÍ</a>
+</section>
 
 <section class="policy">
   <div><i>📦</i>Thanh toán khi nhận</div>
-  <div><i>↩️</i>Đổi trả 30 ngày</div>
   <div><i>🔍</i>Kiểm tra hàng</div>
-  <div><i>🛡️</i>Bảo hành 12 tháng</div>
+  <div><i>☎️</i>Gọi xác nhận</div>
+  <div><i>🛠️</i>Hỗ trợ lắp đặt</div>
 </section>
 
 <section class="sec">
-  <div class="sec-head"><h2>Ưu đãi độc quyền</h2><span>Nhận ngay</span></div>
+  <div class="sec-head"><h2>Quyền lợi khi đặt hàng</h2><span>Rõ ràng</span></div>
   <div class="coupon-grid">
-    <div class="coupon">🚚 Free Ship toàn quốc</div>
-    <div class="coupon">🔥 Giảm 50% khách đầu tiên</div>
+    <div class="coupon">🚚 Miễn phí vận chuyển toàn quốc</div>
+    <div class="coupon">☎️ Gọi xác nhận loại máy trước khi gửi</div>
   </div>
 </section>
 
@@ -357,7 +281,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
   <div class="shipping-card">
     <div class="ship-row"><span>Vận chuyển dự kiến</span><b>3 - 4 ngày</b></div>
     <div class="ship-row"><span>Phí vận chuyển</span><b>Miễn phí toàn quốc</b></div>
-    <div class="ship-row"><span>Chính sách đổi trả</span><span>14 ngày nếu không ưng ý hoặc sản phẩm lỗi</span></div>
+    <div class="ship-row"><span>Hỗ trợ sau bán</span><span>Đổi sản phẩm lỗi theo chính sách của cửa hàng</span></div>
   </div>
 </section>
 
@@ -366,124 +290,68 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
   <div class="shop-card">
     <div class="shop-head">
       <div class="logo">PQ</div>
-      <div><div class="shop-name">ĐIỆN MÁY PHÚ QUÝ</div><div class="verify">✓ Shop đã được xác minh</div></div>
+      <div><div class="shop-name">ĐIỆN MÁY PHÚ QUÝ</div><div class="verify">Hotline/Zalo: 0888.656.119</div></div>
     </div>
-    <div class="shop-stats">
-      <div class="shop-stat"><b>4.9/5</b>Đánh giá</div>
-      <div class="shop-stat"><b>32</b>Mặt hàng</div>
-      <div class="shop-stat"><b>87.556k</b>Sản phẩm đã bán</div>
+    <div class="shop-proof">
+      <div>📍 KĐT Long Việt, Quang Minh, Hà Nội</div>
+      <div>📦 Giao hàng toàn quốc, thanh toán khi nhận</div>
+      <div>☎️ Tư vấn loại máy và cách lắp trước khi gửi</div>
     </div>
   </div>
 </section>
 
+<section class="sec compatibility">
+  <div class="sec-head"><h2>Lắp được cả 2 kiểu máy phổ biến</h2><span>Dễ chọn</span></div>
+  <p class="compat-intro">Đầu xới có thể ghép với máy cắt cỏ đeo vai hoặc máy đeo balo. Trước khi gửi, cửa hàng sẽ gọi xác nhận đúng loại trục và đầu nối.</p>
+  <div class="compat-grid">
+    <article class="compat-card">
+      <img src="assets/may-deo-vai-gan-dau-xoi.jpg" alt="Máy cắt cỏ đeo vai gắn đầu xới" loading="lazy">
+      <div><b>Máy đeo vai</b><span>Gọn, dễ điều khiển, phù hợp làm vườn và xới quanh gốc cây.</span></div>
+    </article>
+    <article class="compat-card">
+      <img src="assets/may-balo-gan-dau-xoi.jpg" alt="Máy cắt cỏ đeo balo gắn đầu xới" loading="lazy">
+      <div><b>Máy đeo balo</b><span>Đeo máy trên lưng, dây truyền động mềm, thuận tiện khi làm trên địa hình vườn.</span></div>
+    </article>
+  </div>
+  <div class="compat-note">📸 Chỉ cần gửi ảnh phần đầu cần máy hoặc cho biết model máy, Phú Quý sẽ kiểm tra trước khi chốt đơn.</div>
+  <a class="combo-btn" href="#dathang">CHỌN LOẠI PHÙ HỢP &amp; ĐẶT HÀNG</a>
+</section>
+
 <section class="sec combo">
-  <h2>Combo máy cắt cỏ lắp đầu xới</h2>
+  <h2>Chưa có máy cắt cỏ?</h2>
   <div class="combo-card">
-    <img src="assets/bo-may-balo.jpg" alt="Bộ máy balo lắp đầu xới">
+    <img src="assets/bo-may-balo.jpg" alt="Bộ máy balo lắp đầu xới" loading="lazy">
     <div class="combo-info">
-      <b>Chưa có máy cắt cỏ?</b>
-      <p>Chọn bộ máy balo hoặc máy cắt cỏ GX35 lắp sẵn đầu xới, giao về có thể sử dụng ngay.</p>
+      <b>Có thể chọn trọn bộ máy + đầu xới</b>
+      <p>Phù hợp với khách muốn nhận bộ hoàn chỉnh, không phải tự tìm máy và phụ kiện riêng.</p>
       <a class="combo-btn" href="#dathang">Nhận báo giá combo</a>
     </div>
   </div>
 </section>
 
 <section id="danhgia" class="sec">
-  <div class="sec-head"><h2>Đánh giá của khách hàng</h2><span>(5.321)</span></div>
+  <div class="sec-head"><h2>Hình ảnh và phản hồi đã lưu</h2><span>Tham khảo</span></div>
   <div class="review-grid">
-    <img src="assets/review-1.jpg" alt="Đánh giá khách hàng 1" loading="lazy">
-    <img src="assets/review-2.jpg" alt="Đánh giá khách hàng 2" loading="lazy">
+    <img src="assets/review-1.jpg" alt="Đánh giá khách hàng 1">
+    <img src="assets/review-2.jpg" alt="Đánh giá khách hàng 2">
   </div>
-
   <div class="review-text">
-    <div class="review-name">Nguyễn Cường <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
+    <div class="review-name">Nguyễn Cường <span class="stars">★★★★★</span></div>
     <p>Đã nhận được hàng. Đóng gói cẩn thận, shop tư vấn chu đáo nhiệt tình. Sản phẩm đúng với quảng cáo.</p>
-    <div class="review-meta"><small>14-03-2023</small><small>Hữu ích (19)</small></div>
+    <small>14-03-2023 · Hữu ích!</small>
   </div>
-
   <div class="review-text">
-    <div class="review-name">Trần Minh Đức <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
+    <div class="review-name">Trần Minh Đức <span class="stars">★★★★★</span></div>
     <p>Nhận hàng nhanh, lắp máy chạy thử làm việc rất tốt. Rất tiện cho nhà nông.</p>
-    <div class="review-meta"><small>14-03-2023</small><small>Hữu ích (14)</small></div>
+    <small>14-03-2023 · Hữu ích!</small>
   </div>
-
-  <div class="review-text recent-review">
-    <div class="review-name">Anh Hùng <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
-    <p>Đầu xới chắc chắn, lắp vào máy khá nhanh. Shop gọi hướng dẫn kỹ trước khi sử dụng nên tôi dùng rất yên tâm.</p>
-    <div class="review-meta"><small>03-07-2026</small><small>Hữu ích (26)</small></div>
-  </div>
-
-  <div class="review-text recent-review">
-    <div class="review-name">Chị Hương <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
-    <p>Hàng được đóng gói cẩn thận, giao đúng mẫu. Dùng để làm luống rau và xạc cỏ tiện hơn làm thủ công rất nhiều.</p>
-    <div class="review-meta"><small>28-06-2026</small><small>Hữu ích (17)</small></div>
-  </div>
-
-  <div class="review-text recent-review">
-    <div class="review-name">Anh Khánh <span class="stars">★★★★★</span><span class="review-badge">✓ Đã mua hàng</span></div>
-    <p>Đã dùng thử thực tế rồi mới đánh giá. Máy vận hành ổn, phần đầu xới bám đất tốt và shop hỗ trợ sau bán hàng nhanh.</p>
-    <div class="review-meta"><small>12-06-2026</small><small>Hữu ích (21)</small></div>
-  </div>
-
-  <h3>Đánh giá tổng quan</h3>
-  <div class="shop-stats">
-    <div class="shop-stat"><b>4.9/5</b>Điểm trung bình</div>
-    <div class="shop-stat"><b>13.400+</b>Lượt mua</div>
-    <div class="shop-stat"><b>98%</b>Khách hài lòng</div>
-  </div>
-  <div class="rating-bars">
-    <div>5 ⭐ (5.180)<div class="bar"><span style="width:97%"></span></div></div>
-    <div>4 ⭐ (141)<div class="bar"><span style="width:23%"></span></div></div>
-    <div>3 ⭐ (0)<div class="bar"><span style="width:0"></span></div></div>
+  <h3>Cam kết từ Điện Máy Phú Quý</h3>
+  <div class="trust-list">
+    <div>✓ Gọi xác nhận trước khi giao</div>
+    <div>✓ Được kiểm tra hàng trước khi thanh toán</div>
+    <div>✓ Hỗ trợ kỹ thuật lắp đặt và sử dụng</div>
   </div>
 </section>
-
-<section class="sec media-section" id="video-thuc-te">
-  <div class="sec-head"><h2>🎥 Video giao máy thực tế</h2><span>Video thật</span></div>
-  <div class="video-list">
-    <div class="video-card">
-      <video controls playsinline preload="metadata">
-        <source src="assets/video-giao-may.mp4" type="video/mp4">
-        Trình duyệt của bạn chưa hỗ trợ phát video.
-      </video>
-      <div class="media-caption">
-        <b>Giao máy và bàn giao cho khách</b>
-        <span>Hình ảnh thực tế trong quá trình giao sản phẩm.</span>
-      </div>
-    </div>
-
-    <div class="video-card">
-      <video controls playsinline preload="metadata">
-        <source src="assets/video-giao-may-va-that.mp4" type="video/mp4">
-        Trình duyệt của bạn chưa hỗ trợ phát video.
-      </video>
-      <div class="media-caption">
-        <b>Kiểm tra máy và hướng dẫn sử dụng</b>
-        <span>Video quay thực tế, giúp khách xem rõ sản phẩm trước khi đặt.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec media-section" id="anh-thuc-te">
-  <div class="sec-head"><h2>📸 Hình ảnh khách hàng thực tế</h2><span>Bấm để xem lớn</span></div>
-  <div class="real-gallery">
-    <button class="real-photo" type="button" data-full="assets/anh-khach-hang-01.jpg" aria-label="Xem ảnh giao và lắp máy">
-      <img src="assets/anh-khach-hang-01.jpg" alt="Khách hàng kiểm tra và lắp máy thực tế" loading="lazy">
-      <span>Kiểm tra, lắp ráp và hướng dẫn trước khi sử dụng</span>
-    </button>
-    <button class="real-photo" type="button" data-full="assets/anh-may-thuc-te-01.jpg" aria-label="Xem ảnh máy ngoài thực tế">
-      <img src="assets/anh-may-thuc-te-01.jpg" alt="Máy cắt cỏ sử dụng ngoài thực tế" loading="lazy">
-      <span>Máy sau khi được đưa vào sử dụng ngoài thực tế</span>
-    </button>
-  </div>
-</section>
-
-<div class="lightbox" id="photoLightbox" aria-hidden="true">
-  <button class="lightbox-close" type="button" aria-label="Đóng ảnh">×</button>
-  <img src="" alt="Ảnh thực tế phóng lớn">
-</div>
-
 
 <section class="sec install">
   <h2>HƯỚNG DẪN LẮP ĐẦU XỚI</h2>
@@ -492,7 +360,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 </section>
 
 <section id="mota" class="sec">
-  <h2>XỚI ĐẤT CỨNG, ĐẤT ĐÁ DỄ DÀNG </h2>
+  <h2>XỚI ĐẤT CỨNG, ĐẤT ĐÁ DỄ DÀNG</h2>
   <img class="feature-img" src="assets/product-08.jpg" alt="Đầu xới hoạt động ngoài thực tế">
   <ul>
     <li>Thay thế xới bằng tay, tiết kiệm thời gian và công sức cho người nông dân.</li>
@@ -551,10 +419,9 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 </section>
 
 <section id="dathang" class="order">
-  <h2>CHỌN GÓI VÀ ĐẶT HÀNG</h2>
+  <h2>ĐẶT HÀNG / NHẬN TƯ VẤN</h2>
   <div class="order-note">
-    Anh/chị chọn 1 trong 3 gói, nhập số điện thoại và địa chỉ nhận hàng.
-    Nhân viên Điện Máy Phú Quý sẽ gọi xác nhận trước khi giao.
+    Chọn gói phù hợp và để lại số điện thoại. Phú Quý sẽ gọi kiểm tra loại máy, xác nhận địa chỉ và chỉ gửi hàng khi anh/chị đồng ý.
   </div>
 
   <form id="leadForm">
@@ -568,55 +435,32 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
         <input type="radio" name="need" value="Gói 2 - 2 đầu xới 1.100.000đ, miễn phí vận chuyển">
         <div><strong>Gói 2: 1.100.000đ</strong><span>02 đầu xới đất + miễn phí vận chuyển</span></div>
       </label>
-<label class="combo-option">
-    <input type="radio" name="need" value="Gói 3 - Combo GX35 + Đầu xới - 2.499.000đ - Miễn phí vận chuyển">
 
-    <div>
-        <strong>
-            🔥 GÓI 3: COMBO MÁY CẮT CỎ 4 THÌ GX35   + ĐẦU XỚI
-            <span style="display:block;
-                         color:#e60012;
-                         font-size:20px;
-                         margin-top:4px;">
-                2.499.000đ
-            </span>
-        </strong>
-
-        <div style="margin-top:8px;
-                    display:inline-block;
-                    background:#fff3cd;
-                    color:#d35400;
-                    padding:4px 8px;
-                    border-radius:5px;
-                    font-size:12px;
-                    font-weight:bold;">
-            ⭐ GÓI ĐƯỢC NHIỀU KHÁCH LỰA CHỌN
-        </div>
-
-        <div style="margin-top:10px;
-                    line-height:1.8;
-                    color:#444;
-                    font-size:14px;">
-
-            ✔ Máy cắt cỏ GX35 chính hãng<br>
-
-            ✔ Đầu xới đất lắp máy cắt cỏ<br>
-
-            <span style="color:#0b8f3c;font-weight:bold;">
-                🎁 Miễn phí vận chuyển toàn quốc
-            </span>
-
-        </div>
+      <label class="combo-option">
+        <input type="radio" name="need" value="Gói 3 - Đầu xới + máy cắt cỏ GX35, 2.500.000đ">
+        <div><strong>Gói 3: 2.500.000đ</strong><span>Đầu xới + máy cắt cỏ GX35, miễn phí vận chuyển</span></div>
+      </label>
     </div>
-</label>
-     </div>
-    
-    <input name="name" required type="text" placeholder="Họ và tên">
-    <input name="phone" required type="tel" inputmode="tel" placeholder="Số điện thoại">
-    <textarea name="note" required placeholder="Địa chỉ nhận hàng"></textarea>
 
-    <button class="submit">🔥 ĐẶT HÀNG NGAY</button>
+    <input name="name" type="text" autocomplete="name" placeholder="Họ và tên (không bắt buộc)">
+    <input name="phone" required type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9 +.-]{9,15}" placeholder="Số điện thoại *">
+    <textarea name="note" required autocomplete="street-address" placeholder="Tỉnh/thành và địa chỉ nhận hàng *"></textarea>
+    <div class="privacy-note">Thông tin chỉ dùng để gọi xác nhận đơn hàng, không yêu cầu chuyển khoản trước.</div>
+    <div class="order-assurance">
+      <div>✓ Không cần chuyển khoản trước</div>
+      <div>✓ Nhân viên gọi xác nhận rồi mới gửi hàng</div>
+      <div>✓ Được kiểm tra hàng trước khi thanh toán</div>
+    </div>
+    <button class="submit">GỬI YÊU CẦU — CHƯA PHẢI THANH TOÁN</button>
   </form>
+</section>
+
+<section class="sec faq">
+  <h2>CÂU HỎI THƯỜNG GẶP</h2>
+  <details open><summary>Có cần chuyển khoản trước không?</summary><p>Không. Anh/chị nhận hàng, kiểm tra rồi mới thanh toán.</p></details>
+  <details><summary>Đầu xới có lắp được máy tôi đang dùng không?</summary><p>Phù hợp nhiều dòng máy cắt cỏ 2 thì và 4 thì. Phú Quý sẽ gọi hỏi loại máy trước khi giao để tư vấn đúng bộ.</p></details>
+  <details><summary>Thời gian nhận hàng bao lâu?</summary><p>Thông thường khoảng 3–4 ngày tùy tỉnh thành và đơn vị vận chuyển.</p></details>
+  <details><summary>Nếu hàng lỗi thì xử lý thế nào?</summary><p>Phú Quý hỗ trợ đổi sản phẩm lỗi và bảo hành theo chính sách 12 tháng.</p></details>
 </section>
 
 <footer class="footer">
@@ -628,13 +472,20 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 </footer>
 </main>
 
-<div class="viewer">👀 <span id="viewerCount">27</span> người đang xem</div>
 <div class="bottom">
   <a class="call" href="tel:0888656119">☎ Gọi</a>
   <a class="zalo" href="https://zalo.me/0888656119">Zalo</a>
-  <a class="buy" href="#dathang">🔥 Đặt hàng</a>
+  <a class="buy" href="#dathang">🔥 Mua 599K</a>
 </div>
 
+<div id="successModal" class="success-modal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+  <div class="success-card">
+    <div style="font-size:46px">✅</div>
+    <h3 id="successTitle">Đã gửi đơn thành công</h3>
+    <p>Điện Máy Phú Quý sẽ gọi xác nhận trong thời gian sớm nhất.</p>
+    <button type="button" onclick="document.getElementById('successModal').classList.remove('show')">Đóng</button>
+  </div>
+</div>
 <script>
 const imgs=[1,2,3,4,5,6,7,8].map(i=>`assets/product-${String(i).padStart(2,'0')}.jpg`);
 let idx=0, autoTimer, resumeTimer;
@@ -649,6 +500,12 @@ function show(i){
     main.src=imgs[idx];
     cur.textContent=idx+1;
     ths.forEach((t,j)=>t.classList.toggle('active',j===idx));
+    const thumbBar=document.querySelector('.thumbs');
+    const activeThumb=ths[idx];
+    if(thumbBar&&activeThumb){
+      const target=activeThumb.offsetLeft-(thumbBar.clientWidth-activeThumb.clientWidth)/2;
+      thumbBar.scrollTo({left:Math.max(0,target),behavior:'smooth'});
+    }
     main.classList.remove('fade');
   },140);
 }
@@ -661,9 +518,9 @@ function interact(){
   clearTimeout(resumeTimer);
   resumeTimer=setTimeout(startAuto,5000);
 }
-document.querySelector('.prev').onclick=(e)=>{e.preventDefault();e.currentTarget.blur();show(idx-1);interact()};
-document.querySelector('.next').onclick=(e)=>{e.preventDefault();e.currentTarget.blur();show(idx+1);interact()};
-ths.forEach((t,i)=>t.onclick=(e)=>{e.preventDefault();e.currentTarget.blur();show(i);interact()});
+document.querySelector('.prev').onclick=()=>{show(idx-1);interact()};
+document.querySelector('.next').onclick=()=>{show(idx+1);interact()};
+ths.forEach((t,i)=>t.onclick=()=>{show(i);interact()});
 let sx=0;
 main.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;interact()},{passive:true});
 main.addEventListener('touchend',e=>{
@@ -672,26 +529,11 @@ main.addEventListener('touchend',e=>{
 },{passive:true});
 startAuto();
 
-let total=2*60*60+59*60+59;
-function tick(){
-  const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60;
-  document.getElementById('h').textContent=String(h).padStart(2,'0');
-  document.getElementById('m').textContent=String(m).padStart(2,'0');
-  document.getElementById('s').textContent=String(s).padStart(2,'0');
-  total=total>0?total-1:2*60*60+59*60+59;
-}
-tick();setInterval(tick,1000);
-
-setInterval(()=>{
-  const el=document.getElementById('viewerCount');
-  let n=parseInt(el.textContent,10);
-  n=Math.max(18,Math.min(39,n+(Math.random()>.5?1:-1)));
-  el.textContent=n;
-},5000);
 
 const URL='https://script.google.com/macros/s/AKfycbxi8wLAtgeWtpvK9EkqkGAkzT48KKX508KpkCl7lEudIWfIHY40qAy9DW5BNUiAteIWXA/exec';
 document.getElementById('leadForm').addEventListener('submit',async function(e){
   e.preventDefault();
+  if(!this.reportValidity()) return;
   const b=this.querySelector('button'),old=b.textContent;
   b.textContent='Đang gửi thông tin...';b.disabled=true;
   const data=new FormData(this);
@@ -700,50 +542,15 @@ document.getElementById('leadForm').addEventListener('submit',async function(e){
   data.append('time',new Date().toLocaleString('vi-VN'));
   try{
     await fetch(URL,{method:'POST',body:data,mode:'no-cors'});
-    alert('Đăng ký thành công! Điện Máy Phú Quý sẽ liên hệ tư vấn sớm.');
+    document.getElementById('successModal').classList.add('show');
     this.reset();
+    this.querySelector('input[name="need"]')?.click();
   }catch{
     alert('Chưa gửi được thông tin. Vui lòng gọi/Zalo 0888.656.119.');
   }finally{
     b.textContent=old;b.disabled=false;
   }
 });
-
-// Ảnh thực tế: bấm để phóng lớn
-const photoLightbox=document.getElementById('photoLightbox');
-if(photoLightbox){
-  const lightboxImg=photoLightbox.querySelector('img');
-  document.querySelectorAll('.real-photo').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      lightboxImg.src=btn.dataset.full;
-      photoLightbox.classList.add('open');
-      photoLightbox.setAttribute('aria-hidden','false');
-      document.body.style.overflow='hidden';
-    });
-  });
-  const closeLightbox=()=>{
-    photoLightbox.classList.remove('open');
-    photoLightbox.setAttribute('aria-hidden','true');
-    lightboxImg.src='';
-    document.body.style.overflow='';
-  };
-  photoLightbox.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
-  photoLightbox.addEventListener('click',e=>{if(e.target===photoLightbox)closeLightbox()});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
-}
-
-// Khi khách xem video, tạm dừng slider để trang nhẹ và đỡ gây phân tán
-document.querySelectorAll('video').forEach(video=>{
-  video.addEventListener('play',()=>{
-    clearInterval(autoTimer);
-    document.querySelectorAll('video').forEach(v=>{if(v!==video)v.pause()});
-  });
-  video.addEventListener('pause',()=>{
-    clearTimeout(resumeTimer);
-    resumeTimer=setTimeout(startAuto,2500);
-  });
-});
-
 </script>
 </body>
 </html>
