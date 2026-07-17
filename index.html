@@ -88,6 +88,36 @@
 
 @media(max-width:1000px){.header .wrap{grid-template-columns:1fr;gap:10px}.hotline{justify-content:flex-start}.hero-grid{grid-template-columns:1fr}.side-menu,.benefit-list{display:none}.promo-row{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(3,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.video-form{grid-template-columns:1fr}}
 @media(max-width:600px){body{padding-bottom:64px}.topbar{font-size:11px}.logo strong{font-size:20px}.nav a{padding:12px 10px;font-size:13px}.hero-area{padding-top:8px}.hero-slider{min-height:460px}.slide{grid-template-columns:1fr;padding:24px 18px 48px}.slide h1{font-size:32px}.slide h2{font-size:25px}.slide img{height:220px}.promo-row{grid-template-columns:1fr 1fr;gap:8px}.promo-card{min-height:160px}.promo-card img{height:160px}.category-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr 1fr;gap:9px}.product .thumb{height:140px}.product .info{padding:9px}.product h3{font-size:14px}.product p{font-size:12px;min-height:48px}.float{display:none}.mobile-bottom{display:flex;position:fixed;left:0;right:0;bottom:0;background:#fff;padding:8px;gap:8px;border-top:1px solid var(--line);z-index:70}.mobile-bottom a{flex:1;text-align:center;color:#fff;background:var(--red);padding:11px;border-radius:8px;font-weight:900}.mobile-bottom a:last-child{background:var(--blue)}.footer .wrap{grid-template-columns:1fr}}
+
+/* Banner đầu tiên giữ nguyên ảnh do chủ website cung cấp */
+.banner-image-slide{
+  display:block;
+  padding:0;
+  background:#fff;
+}
+.banner-image-link{
+  display:block;
+  width:100%;
+  height:100%;
+}
+.banner-full-image{
+  width:100% !important;
+  height:100% !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center;
+  filter:none !important;
+}
+@media(max-width:600px){
+  .banner-image-slide{
+    padding:0;
+  }
+  .banner-full-image{
+    height:100% !important;
+    object-fit:contain !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -116,9 +146,10 @@
 </aside>
 
 <div class="hero-slider" id="heroSlider">
-<div class="slide active">
-<div><h1>ĐIỆN MÁY PHÚ QUÝ</h1><p>Chuyên máy cắt cỏ, đầu xới, máy phun thuốc, nồi cơm công nghiệp và phụ kiện.</p><p><b>Hàng thực tế - giao hàng toàn quốc - hỗ trợ kỹ thuật.</b></p><div class="actions"><a class="btn" href="#bao-gia">NHẬN BÁO GIÁ</a><a class="btn dark" href="#san-pham">XEM SẢN PHẨM</a></div></div>
-<img src="assets/hus545.jpg" alt="Máy cắt cỏ Hus Pro 545">
+<div class="slide active banner-image-slide">
+<a class="banner-image-link" href="#bao-gia" aria-label="Nhận báo giá Điện Máy Phú Quý">
+<img class="banner-full-image" src="assets/banner-phu-quy.png" alt="Banner Điện Máy Phú Quý">
+</a>
 </div>
 <div class="slide">
 <div><h2>ĐẦU XỚI MINI GẮN MÁY CẮT CỎ</h2><p>Xới đất tơi xốp, xạc cỏ, lên luống và tiết kiệm thời gian.</p><p><b>Phù hợp khách đã có máy cắt cỏ.</b></p><div class="actions"><a class="btn" href="dau-xoi-dat/">XEM CHI TIẾT</a></div></div>
