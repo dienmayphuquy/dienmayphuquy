@@ -21,16 +21,6 @@ button,input,select,textarea{font:inherit}
 .topbar b{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar .back{font-size:26px}.dots{font-size:24px}
 .titlebar{background:var(--red);color:#fff;font-weight:900;padding:13px 16px;font-size:17px;letter-spacing:.2px}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ0GPT23P4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TQ0GPT23P4');
-</script>
-</head>
-<body>
 .gallery{background:#fff;border-bottom:8px solid var(--bg)}
 .main-wrap{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
 .main{width:100%;height:100%;object-fit:contain;transition:opacity .25s ease,transform .35s ease}
@@ -210,6 +200,30 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 @media(max-width:380px){.compat-grid{grid-template-columns:1fr}.compat-card{display:grid;grid-template-columns:42% 58%}.compat-card img{height:100%;aspect-ratio:auto}}
 
 </style>
+
+<!-- Cấu hình SEO và hiển thị khi chia sẻ -->
+<link rel="canonical" href="https://dienmayphuquy.github.io/dienmayphuquy/dau-xoi-dat/">
+<meta name="theme-color" content="#e51d24">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Đầu Xới Đất Lắp Máy Cắt Cỏ - Điện Máy Phú Quý">
+<meta property="og:description" content="Đầu xới lắp máy cắt cỏ, giá từ 599.000đ, miễn phí vận chuyển toàn quốc, nhận hàng kiểm tra rồi thanh toán.">
+<meta property="og:url" content="https://dienmayphuquy.github.io/dienmayphuquy/dau-xoi-dat/">
+<meta property="og:image" content="https://dienmayphuquy.github.io/dienmayphuquy/dau-xoi-dat/assets/product-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23e51d24'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='30' font-family='Arial' font-weight='700' fill='white'%3EPQ%3C/text%3E%3C/svg%3E">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ0GPT23P4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TQ0GPT23P4', {
+    send_page_view: true,
+    anonymize_ip: true
+  });
+</script>
 </head>
 <body>
 <main class="page">
@@ -219,7 +233,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 <section class="gallery">
   <div class="main-wrap">
     <button class="arrow prev" aria-label="Ảnh trước">‹</button>
-    <img id="mainImage" class="main" src="assets/product-01.jpg" alt="Đầu xới đất">
+    <img id="mainImage" class="main" src="assets/product-01.jpg" alt="Đầu xới đất lắp máy cắt cỏ" width="1000" height="1000" fetchpriority="high">
     <button class="arrow next" aria-label="Ảnh tiếp theo">›</button>
     <div class="count"><span id="current">1</span>/8</div>
   </div>
@@ -435,7 +449,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
     Chọn gói phù hợp và để lại số điện thoại. Phú Quý sẽ gọi kiểm tra loại máy, xác nhận địa chỉ và chỉ gửi hàng khi anh/chị đồng ý.
   </div>
 
-  <form id="leadForm">
+  <form id="leadForm" action="#" method="post">
     <div class="combo-options">
       <label class="combo-option">
         <input type="radio" name="need" value="Gói 1 - 1 đầu xới 599.000đ, miễn phí vận chuyển" checked>
@@ -462,7 +476,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
       <div>✓ Nhân viên gọi xác nhận rồi mới gửi hàng</div>
       <div>✓ Được kiểm tra hàng trước khi thanh toán</div>
     </div>
-    <button class="submit">GỬI YÊU CẦU — CHƯA PHẢI THANH TOÁN</button>
+    <button class="submit" type="submit">GỬI YÊU CẦU — CHƯA PHẢI THANH TOÁN</button>
   </form>
 </section>
 
@@ -485,7 +499,7 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
 
 <div class="bottom">
   <a class="call" href="tel:0888656119">☎ Gọi</a>
-  <a class="zalo" href="https://zalo.me/0888656119">Zalo</a>
+  <a class="zalo" href="https://zalo.me/0888656119" target="_blank" rel="noopener noreferrer">Zalo</a>
   <a class="buy" href="#dathang">🔥 Mua 599K</a>
 </div>
 
@@ -498,70 +512,202 @@ button.submit{width:100%;padding:14px;border:0;border-radius:6px;background:line
   </div>
 </div>
 <script>
-const imgs=[1,2,3,4,5,6,7,8].map(i=>`assets/product-${String(i).padStart(2,'0')}.jpg`);
-let idx=0, autoTimer, resumeTimer;
-const main=document.getElementById('mainImage');
-const cur=document.getElementById('current');
-const ths=[...document.querySelectorAll('.thumb')];
+(() => {
+  'use strict';
 
-function show(i){
-  idx=(i+imgs.length)%imgs.length;
-  main.classList.add('fade');
-  setTimeout(()=>{
-    main.src=imgs[idx];
-    cur.textContent=idx+1;
-    ths.forEach((t,j)=>t.classList.toggle('active',j===idx));
-    const thumbBar=document.querySelector('.thumbs');
-    const activeThumb=ths[idx];
-    if(thumbBar&&activeThumb){
-      const target=activeThumb.offsetLeft-(thumbBar.clientWidth-activeThumb.clientWidth)/2;
-      thumbBar.scrollTo({left:Math.max(0,target),behavior:'smooth'});
+  const track = (eventName, params = {}) => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
     }
-    main.classList.remove('fade');
-  },140);
-}
-function startAuto(){
-  clearInterval(autoTimer);
-  autoTimer=setInterval(()=>show(idx+1),2000);
-}
-function interact(){
-  clearInterval(autoTimer);
-  clearTimeout(resumeTimer);
-  resumeTimer=setTimeout(startAuto,5000);
-}
-document.querySelector('.prev').onclick=()=>{show(idx-1);interact()};
-document.querySelector('.next').onclick=()=>{show(idx+1);interact()};
-ths.forEach((t,i)=>t.onclick=()=>{show(i);interact()});
-let sx=0;
-main.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;interact()},{passive:true});
-main.addEventListener('touchend',e=>{
-  const dx=e.changedTouches[0].screenX-sx;
-  if(Math.abs(dx)>45) show(idx+(dx<0?1:-1));
-},{passive:true});
-startAuto();
+  };
 
+  // Ghi nhận sản phẩm khi trang sẵn sàng.
+  track('view_item', {
+    currency: 'VND',
+    value: 599000,
+    items: [{
+      item_id: 'dau-xoi-dat',
+      item_name: 'Đầu xới đất lắp máy cắt cỏ',
+      price: 599000,
+      quantity: 1
+    }]
+  });
 
-const URL='https://script.google.com/macros/s/AKfycbxi8wLAtgeWtpvK9EkqkGAkzT48KKX508KpkCl7lEudIWfIHY40qAy9DW5BNUiAteIWXA/exec';
-document.getElementById('leadForm').addEventListener('submit',async function(e){
-  e.preventDefault();
-  if(!this.reportValidity()) return;
-  const b=this.querySelector('button'),old=b.textContent;
-  b.textContent='Đang gửi thông tin...';b.disabled=true;
-  const data=new FormData(this);
-  data.append('product','Đầu xới đất lắp máy cắt cỏ');
-  data.append('page',location.href);
-  data.append('time',new Date().toLocaleString('vi-VN'));
-  try{
-    await fetch(URL,{method:'POST',body:data,mode:'no-cors'});
-    document.getElementById('successModal').classList.add('show');
-    this.reset();
-    this.querySelector('input[name="need"]')?.click();
-  }catch{
-    alert('Chưa gửi được thông tin. Vui lòng gọi/Zalo 0888.656.119.');
-  }finally{
-    b.textContent=old;b.disabled=false;
+  // Slider ảnh sản phẩm.
+  const imgs = [1,2,3,4,5,6,7,8].map(i => `assets/product-${String(i).padStart(2,'0')}.jpg`);
+  let idx = 0;
+  let autoTimer;
+  let resumeTimer;
+  const main = document.getElementById('mainImage');
+  const cur = document.getElementById('current');
+  const ths = [...document.querySelectorAll('.thumb')];
+
+  function show(i) {
+    if (!main || !cur) return;
+    idx = (i + imgs.length) % imgs.length;
+    main.classList.add('fade');
+    window.setTimeout(() => {
+      main.src = imgs[idx];
+      cur.textContent = String(idx + 1);
+      ths.forEach((t, j) => t.classList.toggle('active', j === idx));
+      const thumbBar = document.querySelector('.thumbs');
+      const activeThumb = ths[idx];
+      if (thumbBar && activeThumb) {
+        const target = activeThumb.offsetLeft - (thumbBar.clientWidth - activeThumb.clientWidth) / 2;
+        thumbBar.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+      }
+      main.classList.remove('fade');
+    }, 140);
   }
-});
+
+  function startAuto() {
+    window.clearInterval(autoTimer);
+    autoTimer = window.setInterval(() => show(idx + 1), 2000);
+  }
+
+  function interact() {
+    window.clearInterval(autoTimer);
+    window.clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(startAuto, 5000);
+  }
+
+  document.querySelector('.prev')?.addEventListener('click', () => { show(idx - 1); interact(); });
+  document.querySelector('.next')?.addEventListener('click', () => { show(idx + 1); interact(); });
+  ths.forEach((t, i) => t.addEventListener('click', () => { show(i); interact(); }));
+
+  let sx = 0;
+  main?.addEventListener('touchstart', e => {
+    sx = e.changedTouches[0].screenX;
+    interact();
+  }, { passive: true });
+  main?.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - sx;
+    if (Math.abs(dx) > 45) show(idx + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  startAuto();
+
+  // Theo dõi độ sâu cuộn: mỗi mốc chỉ gửi một lần trong phiên xem trang.
+  const sentScroll = new Set();
+  const scrollMilestones = [25, 50, 75, 90];
+  const reportScroll = () => {
+    const doc = document.documentElement;
+    const maxScroll = doc.scrollHeight - window.innerHeight;
+    if (maxScroll <= 0) return;
+    const percent = Math.round((window.scrollY / maxScroll) * 100);
+    scrollMilestones.forEach(milestone => {
+      if (percent >= milestone && !sentScroll.has(milestone)) {
+        sentScroll.add(milestone);
+        track('scroll_depth', { percent_scrolled: milestone });
+      }
+    });
+  };
+  window.addEventListener('scroll', reportScroll, { passive: true });
+
+  // Theo dõi khi khách nhìn thấy khu vực đặt hàng.
+  const orderSection = document.getElementById('dathang');
+  if ('IntersectionObserver' in window && orderSection) {
+    const formObserver = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        track('view_form', { form_id: 'leadForm', form_name: 'Đặt hàng đầu xới' });
+        formObserver.disconnect();
+      }
+    }, { threshold: 0.35 });
+    formObserver.observe(orderSection);
+  }
+
+  // Theo dõi CTA, gọi điện, Zalo và video.
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a');
+    if (!link) return;
+
+    if (link.matches('a[href="#dathang"]')) {
+      track('click_cta', {
+        cta_text: link.textContent.trim().slice(0, 80),
+        cta_location: link.className || 'unknown'
+      });
+    } else if (link.href.startsWith('tel:')) {
+      track('click_phone', { phone_number: '0888656119' });
+    } else if (link.href.includes('zalo.me')) {
+      track('click_zalo', { contact_channel: 'zalo' });
+    }
+  });
+
+  document.querySelectorAll('video').forEach((video, index) => {
+    let started = false;
+    video.addEventListener('play', () => {
+      if (started) return;
+      started = true;
+      track('video_start', {
+        video_position: index + 1,
+        video_src: video.currentSrc.split('/').pop() || 'unknown'
+      });
+    });
+  });
+
+  // Theo dõi người bắt đầu nhập form.
+  const form = document.getElementById('leadForm');
+  let formStarted = false;
+  form?.addEventListener('input', () => {
+    if (formStarted) return;
+    formStarted = true;
+    track('form_start', { form_id: 'leadForm' });
+  }, { once: true });
+
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxi8wLAtgeWtpvK9EkqkGAkzT48KKX508KpkCl7lEudIWfIHY40qAy9DW5BNUiAteIWXA/exec';
+
+  form?.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (!this.reportValidity()) return;
+
+    const button = this.querySelector('button[type="submit"]');
+    const oldText = button?.textContent || '';
+    if (button) {
+      button.textContent = 'Đang gửi thông tin...';
+      button.disabled = true;
+    }
+
+    const data = new FormData(this);
+    const selectedPackage = data.get('need') || 'Chưa chọn';
+    const params = new URLSearchParams(window.location.search);
+
+    data.append('product', 'Đầu xới đất lắp máy cắt cỏ');
+    data.append('page', window.location.href);
+    data.append('time', new Date().toLocaleString('vi-VN'));
+    data.append('utm_source', params.get('utm_source') || '');
+    data.append('utm_medium', params.get('utm_medium') || '');
+    data.append('utm_campaign', params.get('utm_campaign') || '');
+    data.append('utm_content', params.get('utm_content') || '');
+
+    try {
+      await fetch(ENDPOINT, {
+        method: 'POST',
+        body: data,
+        mode: 'no-cors',
+        keepalive: true
+      });
+
+      track('generate_lead', {
+        currency: 'VND',
+        value: selectedPackage.includes('2.500.000') ? 2500000 : selectedPackage.includes('1.100.000') ? 1100000 : 599000,
+        lead_source: params.get('utm_source') || document.referrer || 'direct',
+        selected_package: String(selectedPackage)
+      });
+
+      document.getElementById('successModal')?.classList.add('show');
+      this.reset();
+      this.querySelector('input[name="need"]')?.click();
+    } catch (error) {
+      console.error('Không gửi được biểu mẫu:', error);
+      track('form_error', { form_id: 'leadForm', error_type: 'network' });
+      window.alert('Chưa gửi được thông tin. Vui lòng gọi/Zalo 0888.656.119.');
+    } finally {
+      if (button) {
+        button.textContent = oldText;
+        button.disabled = false;
+      }
+    }
+  });
+})();
 </script>
 </body>
 </html>
